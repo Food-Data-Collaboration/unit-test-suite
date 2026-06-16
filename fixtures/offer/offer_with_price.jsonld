@@ -1,0 +1,13 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@id": "http://example.org/api/dfc/Enterprises/10000/customerCategories/10005/Offers/10001",
+  "@type": "dfc-b:Offer",
+  "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/10000/customerCategories/10005",
+  "dfc-b:stockLimitation": 20,
+  "dfc-b:hasPrice": {
+    "@type": "dfc-b:Price",
+    "dfc-b:value": 4.95,
+    "dfc-b:VATrate": 5.0,
+    "dfc-b:hasUnit": "dfc-m:GBP"
+  }
+}

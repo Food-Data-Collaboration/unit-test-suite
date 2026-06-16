@@ -1,0 +1,49 @@
+[
+  {
+    "@id": "_:b0",
+    "@type": "https://schema.org/Product",
+    "https://schema.org/name": [
+      {
+        "@value": "Source Product"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "A product for round-trip testing"
+      }
+    ],
+    "https://schema.org/brand": [
+      {
+        "@id": "_:b1"
+      }
+    ],
+    "https://schema.org/offers": [
+      {
+        "@id": "_:b2"
+      }
+    ]
+  },
+  {
+    "@id": "_:b1",
+    "@type": "https://schema.org/Brand",
+    "https://schema.org/name": [
+      {
+        "@value": "TestBrand"
+      }
+    ]
+  },
+  {
+    "@id": "_:b2",
+    "@type": "https://schema.org/Offer",
+    "https://schema.org/price": [
+      {
+        "@value": "9.99"
+      }
+    ],
+    "https://schema.org/priceCurrency": [
+      {
+        "@value": "EUR"
+      }
+    ]
+  }
+]

@@ -1,0 +1,688 @@
+version: "1.0.0"
+status: draft
+last_updated: "2026-06-16"
+
+specs:
+  - name: dfc-interop
+    version: "1.0.0"
+    ontology_version: "1.16.0"
+    context_url: "https://w3id.org/dfc/ontology/context/context_1.16.0.json"
+    description: "DFC Standard interoperability tests for JSON-LD serialization, schema validation, and edge cases"
+    tests:
+      # =============================================================================
+      # Serialization & Deserialization (SER-001 to SER-011)
+      # =============================================================================
+      - id: SER-001
+        category: serialization
+        priority: mandatory
+        fixture: enterprise/enterprise_full.jsonld
+        action: >
+          Parse the fixture; access @type, dfc-b:name, dfc-b:supplies, and the
+          nested dfc-b:Address
+        expected: >
+          All fields accessible without error; @type resolves to dfc-b:Enterprise
+
+      - id: SER-002
+        category: serialization
+        priority: mandatory
+        fixture: supplied-product/supplied_product_full.jsonld
+        action: >
+          Parse the fixture; access dfc-b:hasQuantity, including its nested
+          dfc-b:hasUnit and dfc-b:value
+        expected: >
+          dfc-b:hasUnit resolves to dfc-m:Gram; dfc-b:value is accessible as a
+          numeric or string value without error
+
+      - id: SER-003
+        category: serialization
+        priority: mandatory
+        fixture: catalog/catalog_item.jsonld
+        action: >
+          Parse the @graph; navigate from dfc-b:CatalogItem to dfc-b:offeredThrough
+          to dfc-b:Offer to dfc-b:hasPrice
+        expected: >
+          dfc-b:value, dfc-b:VATrate, and dfc-b:hasUnit on the Price are all
+          accessible
+
+      - id: SER-004
+        category: serialization
+        priority: mandatory
+        fixture: order/order_pickup.jsonld
+        action: >
+          Parse the @graph; navigate from dfc-b:Order to dfc-b:hasPart (array) to
+          dfc-b:OrderLine, and dfc-b:selects to dfc-b:PickUpOption to
+          dfc-b:pickedUpAt to dfc-b:PhysicalPlace
+        expected: >
+          All nested objects accessible; dfc-b:date on Order is parseable as an
+          ISO 8601 datetime
+
+      - id: SER-005
+        category: serialization
+        priority: mandatory
+        fixture: person/person.jsonld
+        action: >
+          Parse the fixture; access dfc-b:firstName, dfc-b:familyName, and
+          dfc-b:hasAddress
+        expected: >
+          All fields accessible; @type resolves to dfc-b:Person
+
+      - id: SER-006
+        category: serialization
+        priority: mandatory
+        fixture: enterprise/enterprise_list.jsonld
+        action: >
+          Parse the @graph array; iterate over all nodes and verify each is typed
+          dfc-b:Enterprise
+        expected: >
+          Three Enterprise nodes retrieved; all @id values are absolute IRIs
+
+      - id: SER-007
+        category: serialization
+        priority: mandatory
+        fixture: supplied-product/supplied_product_full.jsonld
+        action: >
+          Parse the fixture into a native object, serialize it back to JSON-LD,
+          then parse again
+        expected: >
+          Second parse yields semantically equivalent data; no fields dropped, no
+          types coerced, dfc-b:refrigerated remains a boolean
+
+      - id: SER-008
+        category: serialization
+        priority: mandatory
+        fixture: supplied-product/supplied_product_variant.jsonld
+        action: >
+          Parse the @graph; navigate from the parent product's dfc-b:hasVariant
+          array to each variant, and from a variant's dfc-b:isVariantOf back to
+          the parent
+        expected: >
+          Bidirectional links are accessible; the @id values match correctly across
+          directions
+
+      - id: SER-009
+        category: serialization
+        priority: mandatory
+        fixture: supplied-product/supplied_product_transformation.jsonld
+        action: >
+          Parse the @graph; navigate the transformation chain: SuppliedProduct to
+          asPlannedProductionFlow to AsPlannedTransformation to hasInput / hasOutput
+        expected: >
+          All transformation nodes accessible and correctly typed;
+          dfc-b:hasTransformationType resolves to a valid vocabulary term
+
+      - id: SER-010
+        category: serialization
+        priority: mandatory
+        fixture: order/order_delivery.jsonld
+        action: >
+          Parse the fixture; confirm dfc-b:selects points to a
+          dfc-b:DeliveryOption, and that option has dfc-b:deliveredAt pointing to a
+          dfc-b:PhysicalPlace with a full dfc-b:Address
+        expected: >
+          All nodes accessible; delivery address fields (street, city, postcode,
+          country) present
+
+      - id: SER-011
+        category: serialization
+        priority: mandatory
+        fixture: order/order_with_payment.jsonld
+        action: >
+          Parse the fixture; access dfc-b:hasPaymentMethod on the Order, and
+          navigate to its nested dfc-b:Price
+        expected: >
+          dfc-b:paymentMethodType, dfc-b:value, dfc-b:VATrate, and dfc-b:hasUnit
+          on the price are all accessible
+
+      # =============================================================================
+      # Schema Validation (SCH-001 to SCH-009)
+      # =============================================================================
+      - id: SCH-001
+        category: schema
+        priority: mandatory
+        fixture: enterprise/enterprise_full.jsonld
+        action: >
+          Validate the fixture against the DFC context and ontology
+        expected: >
+          Zero validation errors; all dfc-b: terms are recognised from the ontology
+
+      - id: SCH-002
+        category: schema
+        priority: mandatory
+        fixture: enterprise/enterprise_minimal.jsonld
+        action: >
+          Validate a document with only @id, @type, and dfc-b:name
+        expected: >
+          Passes validation; optional fields MUST NOT be required by the platform
+
+      - id: SCH-003
+        category: schema
+        priority: mandatory
+        fixture: invalid/wrong_type_for_price.jsonld
+        action: >
+          Attempt to validate a document where dfc-b:hasPrice is a plain string
+          instead of a dfc-b:Price object
+        expected: >
+          Validation raises an error or warning identifying dfc-b:hasPrice; the
+          platform MUST NOT silently accept the value
+
+      - id: SCH-004
+        category: schema
+        priority: mandatory
+        fixture: invalid/missing_context.jsonld
+        action: >
+          Attempt to process a dfc-b: document with no @context
+        expected: >
+          A specific, catchable error is raised before processing; terms MUST NOT
+          be silently treated as relative IRIs
+
+      - id: SCH-005
+        category: schema
+        priority: mandatory
+        fixture: invalid/missing_required_field.jsonld
+        action: >
+          Validate a dfc-b:SuppliedProduct with no dfc-b:name
+        expected: >
+          Platform raises a validation error identifying the missing field; does
+          not silently produce an anonymous product
+
+      - id: SCH-006
+        category: schema
+        priority: mandatory
+        fixture: supplied-product/supplied_product_full.jsonld
+        action: >
+          Validate that dfc-b:hasType resolves to a known term in the dfc-pt:
+          taxonomy (e.g. dfc-pt:processed-vegetable)
+        expected: >
+          Term is accepted; no error about unrecognised product type
+
+      - id: SCH-007
+        category: schema
+        priority: mandatory
+        fixture: supplied-product/supplied_product_full.jsonld
+        action: >
+          Validate that dfc-b:hasCertification value dfc-f:Organic-AB resolves
+          against the DFC facets vocabulary
+        expected: >
+          Term accepted; no unknown IRI error
+
+      - id: SCH-008
+        category: schema
+        priority: mandatory
+        fixture: supplied-product/supplied_product_full.jsonld
+        action: >
+          Validate that dfc-b:hasUnit on the QuantitativeValue resolves to a
+          dfc-m: term (e.g. dfc-m:Gram)
+        expected: >
+          Term accepted; value is not treated as a raw string
+
+      - id: SCH-009
+        category: schema
+        priority: optional
+        fixture: "*"
+        action: >
+          Confirm the @context URL in each fixture references the same ontology
+          version the platform was built against (currently context_1.16.0.json)
+        expected: >
+          No version mismatch detected; or platform raises a meaningful warning if
+          context versions differ
+
+      # =============================================================================
+      # Edge Cases & Error Handling (EDG-001 to EDG-015)
+      # =============================================================================
+      - id: EDG-001
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse one document where dfc-b:supplies is a single IRI string, and
+          another where it is a JSON array of IRIs
+        expected: >
+          Both forms are handled without error; the platform normalises to an
+          iterable collection in both cases
+        inline_inputs:
+          single_iri:
+            dfc-b:supplies: "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001"
+          array_iri:
+            dfc-b:supplies:
+              - "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001"
+              - "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002"
+
+      - id: EDG-002
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse an Offer where dfc-b:value inside dfc-b:hasPrice is the JSON
+          number 4.95, and separately where it is the string "4.95"
+        expected: >
+          Platform accepts both forms without error; numeric value is preserved
+          without floating-point distortion (i.e. 4.95 must not become
+          4.950000001)
+        inline_inputs:
+          numeric_value:
+            dfc-b:hasPrice:
+              "@type": "dfc-b:Price"
+              dfc-b:value: 4.95
+          string_value:
+            dfc-b:hasPrice:
+              "@type": "dfc-b:Price"
+              dfc-b:value: "4.95"
+
+      - id: EDG-003
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse a document using a relative @id such as "suppliedProduct/item1"
+          with "@base": "http://myplatform.example/" declared in the @context array
+        expected: >
+          @id resolves to the absolute IRI
+          http://myplatform.example/suppliedProduct/item1; no error is thrown
+        inline_inputs:
+          - "@context":
+              - "@base": "http://myplatform.example/"
+              - dfc-b: "http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#"
+            "@id": "suppliedProduct/item1"
+            "@type": "dfc-b:SuppliedProduct"
+
+      - id: EDG-004
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse a POST request body where the object uses "@id": "#" as a
+          client-assigned placeholder
+        expected: >
+          Document is accepted for write operations; platform assigns a real IRI
+          before storing; "#" is not persisted as the object's identifier
+        inline_inputs:
+          "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json"
+          "@id": "#"
+          "@type": "dfc-b:CatalogItem"
+          dfc-b:sku: "TEST"
+
+      - id: EDG-005
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse two documents: one where dfc-b:hasAddress is an inline object,
+          another where it is an IRI reference to a separate node
+        expected: >
+          Both forms produce the same accessible address data; the inline form is
+          not rejected, and the IRI form does not silently lose address fields
+
+      - id: EDG-006
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse a SuppliedProduct with "dfc-b:refrigerated": true (JSON boolean),
+          and separately "dfc-b:refrigerated": "true" (string, as seen in v1.9
+          examples)
+        expected: >
+          Both forms evaluate to a truthy boolean in the platform's native
+          representation; false / "false" evaluate as falsy
+
+      - id: EDG-007
+        category: edge-case
+        priority: mandatory
+        fixture: supplied-product/supplied_product_full.jsonld
+        action: >
+          Parse dfc-b:hasTemperature with dfc-b:minValue and dfc-b:maxValue;
+          verify min < max
+        expected: >
+          Both values accessible as comparable numerics; platform does not reject
+          negative temperature values (e.g. -5C)
+
+      - id: EDG-008
+        category: edge-case
+        priority: mandatory
+        fixture: order/order_pickup.jsonld
+        action: >
+          Parse dfc-b:date value "2024-06-01T10:00:00+01:00"
+        expected: >
+          Date is parsed as a timezone-aware datetime; timezone offset is
+          preserved, not silently converted to UTC or dropped
+
+      - id: EDG-009
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse the DFC prototype's linkSimple API response, which attaches
+          owl:sameAs to a platform's data URI
+        expected: >
+          owl:sameAs is parsed and the linked IRI is accessible; the platform's
+          internal object is enriched with the cross-platform link
+        inline_inputs:
+          "@id": "http://platform-a.example/products/123"
+          owl:sameAs:
+            - "http://platform-b.example/products/456"
+
+      - id: EDG-010
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse a document with an empty @graph array
+        expected: >
+          Returns an empty collection; no error thrown; platform does not interpret
+          this as a malformed document
+        inline_inputs:
+          "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json"
+          "@graph": []
+
+      - id: EDG-011
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse a SuppliedProduct with "dfc-b:totalTheoreticalStock": 0.0
+        expected: >
+          Zero is preserved as a numeric zero; it MUST NOT be treated as null,
+          omitted, or silently dropped (zero stock is a meaningful state)
+
+      - id: EDG-012
+        category: edge-case
+        priority: mandatory
+        fixture: catalog/catalog_item.jsonld
+        action: >
+          Parse both dfc-b:CatalogItem and dfc-b:Offer with dfc-b:stockLimitation
+          set to 0
+        expected: >
+          Zero is preserved; not interpreted as unlimited stock or treated as absent
+
+      - id: EDG-013
+        category: edge-case
+        priority: mandatory
+        fixture: invalid/malformed_iri.jsonld
+        action: >
+          Attempt to resolve an IRI that is syntactically invalid (e.g. contains
+          spaces or illegal characters)
+        expected: >
+          Platform raises a specific error naming the invalid IRI; does not
+          silently treat it as a relative path or blank node
+
+      - id: EDG-014
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Issue a request to the platform's DFC user data endpoint with no Bearer
+          token; then with an expired/invalid token
+        expected: >
+          Both cases return HTTP 401; response body MUST NOT contain any user data
+        runtime_only: true
+
+      - id: EDG-015
+        category: edge-case
+        priority: optional
+        fixture: supplied-product/supplied_product_full.jsonld
+        action: >
+          Confirm that two platforms independently parsing the same
+          dfc-pt:processed-vegetable term both resolve it to the same IRI from the
+          shared DFC taxonomy
+        expected: >
+          Both platforms expand the term to the same absolute IRI; no
+          platform-local rewriting occurs
+
+  - name: jsonld-interop
+    version: "1.0.0"
+    description: "Generic JSON-LD interoperability tests for serialization, schema validation, and edge cases"
+    tests:
+      # =============================================================================
+      # Serialization & Deserialization (SER-001 to SER-010)
+      # =============================================================================
+      - id: SER-001
+        category: serialization
+        priority: mandatory
+        fixture: valid/minimal.jsonld
+        action: >
+          Parse the fixture into the platform's native JSON-LD structure
+        expected: >
+          Parses without error; @context and @type fields are accessible
+
+      - id: SER-002
+        category: serialization
+        priority: mandatory
+        fixture: valid/minimal.jsonld
+        action: >
+          Construct an equivalent object natively, serialize to JSON-LD string,
+          parse back, and compare
+        expected: >
+          Round-trip produces semantically equivalent JSON-LD (key order MAY vary)
+
+      - id: SER-003
+        category: serialization
+        priority: mandatory
+        fixture: roundtrip/source.jsonld
+        action: >
+          Expand the source fixture and compare against the expected expanded form
+        expected: >
+          Expanded output matches roundtrip/expanded.jsonld semantically
+
+      - id: SER-004
+        category: serialization
+        priority: mandatory
+        fixture: roundtrip/expanded.jsonld
+        action: >
+          Compact the expanded fixture using the context in compacted.jsonld,
+          compare output
+        expected: >
+          Compacted output matches roundtrip/compacted.jsonld semantically
+
+      - id: SER-005
+        category: serialization
+        priority: mandatory
+        fixture: roundtrip/source.jsonld
+        action: >
+          Flatten the source fixture and compare against the expected flattened
+          form
+        expected: >
+          Flattened output matches roundtrip/flattened.jsonld; all blank nodes are
+          consistently identified
+
+      - id: SER-006
+        category: serialization
+        priority: mandatory
+        fixture: roundtrip/source.jsonld
+        action: >
+          Expand then compact the fixture using its own context
+        expected: >
+          Output is semantically equivalent to the original source; no data is
+          lost or mutated
+
+      - id: SER-007
+        category: serialization
+        priority: mandatory
+        fixture: valid/nested_nodes.jsonld
+        action: >
+          Parse and access a deeply nested node (3+ levels)
+        expected: >
+          All nested @id, @type, and property values are accessible without error
+
+      - id: SER-008
+        category: serialization
+        priority: mandatory
+        fixture: valid/array_values.jsonld
+        action: >
+          Parse and iterate over array-valued properties
+        expected: >
+          All array elements are accessible; order is preserved
+
+      - id: SER-009
+        category: serialization
+        priority: mandatory
+        fixture: valid/multilingual.jsonld
+        action: >
+          Parse a document with @language tags on string values
+        expected: >
+          Language tags are preserved and accessible per value
+
+      - id: SER-010
+        category: serialization
+        priority: mandatory
+        fixture: valid/full_context.jsonld
+        action: >
+          Deserialize integer, float, and boolean typed values; re-serialize and
+          compare
+        expected: >
+          Types are preserved through the round-trip; no coercion to strings
+
+      # =============================================================================
+      # Schema Validation (SCH-001 to SCH-005)
+      # =============================================================================
+      - id: SCH-001
+        category: schema
+        priority: mandatory
+        fixture: valid/full_context.jsonld
+        action: >
+          Validate the fixture against its declared @context
+        expected: >
+          Validation passes; zero errors or warnings
+
+      - id: SCH-002
+        category: schema
+        priority: mandatory
+        fixture: invalid/missing_context.jsonld
+        action: >
+          Attempt to validate or process the fixture
+        expected: >
+          Platform raises a specific, catchable error indicating missing context;
+          does not silently succeed
+
+      - id: SCH-003
+        category: schema
+        priority: mandatory
+        fixture: invalid/broken_iri.jsonld
+        action: >
+          Attempt to process the fixture; observe IRI resolution behaviour
+        expected: >
+          Platform raises an error or warning for the malformed IRI; it MUST NOT
+          silently resolve it to a relative path
+
+      - id: SCH-004
+        category: schema
+        priority: mandatory
+        fixture: invalid/type_mismatch.jsonld
+        action: >
+          Validate the fixture where a property value has the wrong @type
+        expected: >
+          Validation raises an error referencing the specific property; does not
+          silently coerce the value
+
+      - id: SCH-005
+        category: schema
+        priority: optional
+        fixture: valid/minimal.jsonld
+        action: >
+          Fetch and resolve the remote context at https://schema.org/
+        expected: >
+          Context is resolved and terms are correctly mapped; network errors are
+          caught and surfaced cleanly
+
+      # =============================================================================
+      # Edge Cases & Error Handling (EDG-001 to EDG-009)
+      # =============================================================================
+      - id: EDG-001
+        category: edge-case
+        priority: mandatory
+        fixture: invalid/malformed_json.jsonld
+        action: >
+          Attempt to parse the fixture
+        expected: >
+          A JSON parse error is raised before any JSON-LD processing; error
+          message is human-readable
+
+      - id: EDG-002
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse and expand an empty JSON object
+        expected: >
+          Returns an empty array [] on expansion; no error is thrown
+        inline_inputs: {}
+
+      - id: EDG-003
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse a document where a property value is explicitly null
+        expected: >
+          Null value is preserved and accessible; property is not silently dropped
+        inline_inputs:
+          "@context": "https://schema.org/"
+          name: null
+
+      - id: EDG-004
+        category: edge-case
+        priority: mandatory
+        fixture: valid/multilingual.jsonld
+        action: >
+          Parse and re-serialize strings containing non-ASCII characters (CJK,
+          Arabic, emoji)
+        expected: >
+          Characters are preserved exactly through round-trip; no encoding errors
+
+      - id: EDG-005
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse and re-serialize a value larger than MAX_SAFE_INTEGER
+        expected: >
+          Value is preserved without silent precision loss; platforms that cannot
+          represent it exactly MUST raise an error rather than silently truncate
+        inline_inputs:
+          "@context": "https://schema.org/"
+          identifier: 9007199254740993
+
+      - id: EDG-006
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse the document with a duplicate key
+        expected: >
+          Either raises an error OR deterministically retains one value (last-wins
+          is acceptable); behaviour MUST be documented by the platform; silent data
+          loss is not acceptable
+        inline_inputs:
+          "@context": "https://schema.org/"
+          name: "First"
+          name: "Second"
+
+      - id: EDG-007
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Attempt to process a context that references itself
+        expected: >
+          Platform detects the cycle and raises a specific error; does not hang or
+          exhaust memory
+        runtime_only: true
+
+      - id: EDG-008
+        category: edge-case
+        priority: mandatory
+        fixture: valid/full_context.jsonld
+        action: >
+          Parse a document with a top-level @graph array and access individual
+          nodes
+        expected: >
+          All nodes within @graph are accessible; graph container is not flattened
+          or dropped
+
+      - id: EDG-009
+        category: edge-case
+        priority: optional
+        fixture: valid/nested_nodes.jsonld
+        action: >
+          Parse a document with blank nodes nested 5+ levels deep
+        expected: >
+          All nodes reachable without stack overflow or memory error on typical
+          hardware

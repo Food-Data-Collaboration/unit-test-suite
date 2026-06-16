@@ -1,0 +1,36 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@graph": [
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Basil Pesto",
+      "dfc-b:hasVariant": [
+        "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002",
+        "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10003"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Basil Pesto - 100g",
+      "dfc-b:isVariantOf": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10003",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Basil Pesto - Case of 12",
+      "dfc-b:isVariantOf": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:pack",
+        "dfc-b:value": 12.0
+      }
+    }
+  ]
+}

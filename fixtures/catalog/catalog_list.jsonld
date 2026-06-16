@@ -1,0 +1,20 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@graph": [
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/CatalogItems/10001",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:sku": "PESTO-100"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/CatalogItems/10002",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:sku": "FLOUR-500"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/CatalogItems/10003",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:sku": "OLIVE-750"
+    }
+  ]
+}

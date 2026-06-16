@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "Array Test",
+  "knows": [
+    {
+      "@type": "Person",
+      "name": "Alice"
+    },
+    {
+      "@type": "Person",
+      "name": "Bob"
+    },
+    {
+      "@type": "Person",
+      "name": "Charlie"
+    }
+  ],
+  "email": [
+    "alice@example.org",
+    "bob@example.org"
+  ]
+}

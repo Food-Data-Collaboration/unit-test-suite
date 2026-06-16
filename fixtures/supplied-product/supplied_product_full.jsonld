@@ -1,0 +1,25 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+  "@type": "dfc-b:SuppliedProduct",
+  "dfc-b:name": "Basil Pesto",
+  "dfc-b:description": "Fresh basil pesto, 100g jar",
+  "dfc-b:hasType": "dfc-pt:processed-vegetable",
+  "dfc-b:hasQuantity": {
+    "@type": "dfc-b:QuantitativeValue",
+    "dfc-b:hasUnit": "dfc-m:Gram",
+    "dfc-b:value": 100.0
+  },
+  "dfc-b:alcoholPercentage": 0.0,
+  "dfc-b:lifetime": "12 months",
+  "dfc-b:totalTheoreticalStock": 50.0,
+  "dfc-b:hasCertification": "dfc-f:Organic-AB",
+  "dfc-b:refrigerated": true,
+  "dfc-b:frozen": false,
+  "dfc-b:hasTemperature": {
+    "@type": "dfc-b:Temperature",
+    "dfc-b:hasUnit": "dfc-m:Celsius",
+    "dfc-b:minValue": 2,
+    "dfc-b:maxValue": 8
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": {
+    "@value": "Jean-Pierre Dupont",
+    "@language": "fr"
+  },
+  "description": [
+    {
+      "@value": "A farmer in Brittany",
+      "@language": "en"
+    },
+    {
+      "@value": "Un fermier en Bretagne",
+      "@language": "fr"
+    }
+  ],
+  "knows": {
+    "@type": "Person",
+    "name": {
+      "@value": "田中太郎",
+      "@language": "ja"
+    }
+  }
+}

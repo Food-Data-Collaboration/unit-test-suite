@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Source Product",
+  "description": "A product for round-trip testing",
+  "brand": {
+    "@type": "Brand",
+    "name": "TestBrand"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "9.99",
+    "priceCurrency": "EUR"
+  }
+}

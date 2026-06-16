@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "custom": "http://example.org/custom#"
+  },
+  "@type": "Person",
+  "name": "John Doe",
+  "age": 30,
+  "height": 1.75,
+  "isStudent": false,
+  "knows": {
+    "@type": "Person",
+    "name": "Jane Smith"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Example Corp",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main St",
+      "addressLocality": "Springfield",
+      "addressRegion": "IL",
+      "postalCode": "62701"
+    }
+  }
+}

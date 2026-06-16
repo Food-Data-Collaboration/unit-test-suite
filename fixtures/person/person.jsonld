@@ -1,0 +1,9 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@id": "http://example.org/api/dfc/Persons/10000",
+  "@type": "dfc-b:Person",
+  "dfc-b:firstName": "Ali",
+  "dfc-b:familyName": "Khan",
+  "dfc-b:hasEmail": "ali.khan@example.org",
+  "dfc-b:hasAddress": "http://example.org/api/dfc/Addresses/40000"
+}

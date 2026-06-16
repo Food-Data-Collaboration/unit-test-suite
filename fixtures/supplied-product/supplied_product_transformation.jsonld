@@ -1,0 +1,23 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@graph": [
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Organic Flour",
+      "dfc-b:asPlannedProductionFlow": "http://example.org/api/dfc/Enterprises/10000/AsPlannedTransformations/10001"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/AsPlannedTransformations/10001",
+      "@type": "dfc-b:AsPlannedTransformation",
+      "dfc-b:hasTransformationType": "dfc-b:Transformation",
+      "dfc-b:hasInput": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002",
+      "dfc-b:hasOutput": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Raw Wheat"
+    }
+  ]
+}
