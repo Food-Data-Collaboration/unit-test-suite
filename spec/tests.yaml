@@ -1,11 +1,11 @@
-version: "1.0.0"
+version: "2.0.0"
 status: draft
-last_updated: "2026-06-16"
+last_updated: "2026-06-17"
 
 specs:
   - name: dfc-interop
-    version: "1.0.0"
-    ontology_version: "1.16.0"
+    version: "2.0.0"
+    ontology_version: "2.0.0"
     context_url: "https://w3id.org/dfc/ontology/context/context_2.0.0.json"
     description: "DFC Standard interoperability tests for JSON-LD serialization, schema validation, and edge cases"
     tests:

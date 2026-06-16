@@ -1,9 +1,9 @@
 # DFC Standard — Interoperability Test Specification
 
-**Version:** 1.0.0
+**Version:** 2.0.0
 **Status:** Draft
-**Last Updated:** 2026-06-16
-**Ontology version tested:** 1.16.0
+**Last Updated:** 2026-06-17
+**Ontology version tested:** 2.0.0
 **Context URL:** `https://w3id.org/dfc/ontology/context/context_2.0.0.json`
 
 ---
@@ -830,6 +830,7 @@ Place results at `/results/{platform-name}/results.xml`. Use a consistent lowerc
 
 | Version | Change |
 |---|---|
+| 2.0.0 | Aligned with DFC ontology v2.0.0 — namespace migration, Enterprise→Organization rename, new test cases for Variant, ProductOption, TemplateSaleSession |
 | 1.0.0 | Initial release — 35 test cases across 3 categories, aligned with DFC ontology v1.16.0 |
 
 Test IDs are permanent and will never be reassigned. When the DFC ontology version increments, a new spec version will be issued. Platforms will have a minimum 4-week migration window before new tests become mandatory.
