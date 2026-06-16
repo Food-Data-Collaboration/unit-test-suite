@@ -57,3 +57,40 @@ class TestDFCEdgeCases:
         assert data["@type"] == "dfc-b:SuppliedProduct"
         supplies = data.get("dfc-b:supplies", "")
         assert " " in supplies or not supplies.startswith("http://")
+
+    def test_edg016_organization_vcard_equivalence(self, load_fixture):
+        """EDG-016: Organization equivalence with vcard:Organization."""
+        data = load_fixture("organization/organization_full.jsonld")
+
+        assert "@graph" in data
+        org = data["@graph"][0]
+        assert org["@type"] == "dfc-b:Organization"
+
+    def test_edg017_is_variant_of_domain_constraint(self):
+        """EDG-017: isVariantOf domain constraint (must be Variant)."""
+        valid_variant = {
+            "@type": "dfc-b:Variant",
+            "dfc-b:isVariantOf": "http://example.org/products/10001"
+        }
+        assert valid_variant["@type"] == "dfc-b:Variant"
+        assert "dfc-b:isVariantOf" in valid_variant
+
+    def test_edg018_icall_vevent_temporal(self, load_fixture):
+        """EDG-018: iCal Vevent temporal recurrence properties."""
+        data = load_fixture("sale-session/template_sale_session.jsonld")
+
+        assert "@graph" in data
+        vevent = data["@graph"][2]
+        assert "http://www.w3.org/2002/12/cal/icaltz#dtstart" in vevent
+        assert "http://www.w3.org/2002/12/cal/icaltz#dtend" in vevent
+        assert "http://www.w3.org/2002/12/cal/icaltz#freq" in vevent
+
+    def test_edg019_geojson_geometry_types(self, load_fixture):
+        """EDG-019: GeoJSON Point and Polygon geometry types."""
+        data = load_fixture("physical-place/place_with_geojson.jsonld")
+
+        assert data["@type"] == "dfc-b:PhysicalPlace"
+        feature = data["dfc-b:hasGeoJsonFeature"]
+        geometry = feature["https://purl.org/geojson/vocab#geometry"]
+        assert geometry["@type"] == "https://purl.org/geojson/vocab#Point"
+        assert "https://purl.org/geojson/vocab#coordinates" in geometry

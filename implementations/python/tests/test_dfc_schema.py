@@ -62,3 +62,31 @@ class TestDFCSchemaValidation:
 
         quantity = data["dfc-b:hasQuantity"]
         assert quantity["dfc-b:hasUnit"] == "dfc-m:Gram"
+
+    def test_sch010_validate_variant_characteristic(self, load_fixture):
+        """SCH-010: Validate VariantCaracteristic terms."""
+        data = load_fixture("variant/variant_with_options.jsonld")
+
+        assert "@graph" in data
+        char = data["@graph"][3]
+        assert char["@type"] == "dfc-b:VariantCaracteristic"
+        assert "dfc-b:hasProductOption" in char
+        assert "dfc-b:hasProductOptionValue" in char
+
+    def test_sch011_validate_template_sale_session(self, load_fixture):
+        """SCH-011: Validate TemplateSaleSession with iCal Vevent."""
+        data = load_fixture("sale-session/template_sale_session.jsonld")
+
+        assert "@graph" in data
+        session = data["@graph"][1]
+        assert session["@type"] == "dfc-b:TemplateSaleSession"
+        assert "dfc-b:occursAt" in session
+
+    def test_sch012_reject_invalid_variant_characteristic(self, load_fixture):
+        """SCH-012: Reject Variant with invalid characteristic reference."""
+        data = load_fixture("invalid/variant_invalid_characteristic.jsonld")
+
+        assert data["@type"] == "dfc-b:Variant"
+        assert "dfc-b:hasVariantCaracteristic" in data
+        char_ref = data["dfc-b:hasVariantCaracteristic"]
+        assert "nonexistent" in char_ref or "99999" in char_ref

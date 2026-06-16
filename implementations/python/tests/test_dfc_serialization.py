@@ -113,3 +113,66 @@ class TestDFCSerialization:
         payment = data["@graph"][2]
         assert payment["@type"] == "dfc-b:PaymentMethod"
         assert "dfc-b:hasPrice" in payment
+
+    def test_ser012_parse_organization(self, load_fixture):
+        """SER-012: Parse a DFC Organization document (renamed from Enterprise)."""
+        data = load_fixture("organization/organization_full.jsonld")
+
+        assert "@graph" in data
+        org = data["@graph"][0]
+        assert org["@type"] == "dfc-b:Organization"
+        assert org["dfc-b:name"] == "Fred's Farm"
+        assert "dfc-b:supplies" in org
+        assert "dfc-b:hasAddress" in org
+
+    def test_ser013_parse_variant_with_options(self, load_fixture):
+        """SER-013: Parse Variant with ProductOption and VariantCaracteristic."""
+        data = load_fixture("variant/variant_with_options.jsonld")
+
+        assert "@graph" in data
+        variant = data["@graph"][1]
+        assert variant["@type"] == "dfc-b:Variant"
+        assert "dfc-b:hasVariantCaracteristic" in variant
+
+        char = data["@graph"][3]
+        assert char["@type"] == "dfc-b:VariantCaracteristic"
+        assert "dfc-b:hasProductOption" in char
+        assert "dfc-b:hasProductOptionValue" in char
+
+    def test_ser014_parse_template_sale_session(self, load_fixture):
+        """SER-014: Parse TemplateSaleSession with iCal Vevent."""
+        data = load_fixture("sale-session/template_sale_session.jsonld")
+
+        assert "@graph" in data
+        org = data["@graph"][0]
+        assert org["@type"] == "dfc-b:Organization"
+        assert "dfc-b:hasTemplateSaleSession" in org
+
+        session = data["@graph"][1]
+        assert session["@type"] == "dfc-b:TemplateSaleSession"
+        assert "dfc-b:occursAt" in session
+
+    def test_ser015_parse_organization_certified(self, load_fixture):
+        """SER-015: Parse Organization with certifies/isCertifiedBy."""
+        data = load_fixture("organization/organization_certified.jsonld")
+
+        assert "@graph" in data
+        org = data["@graph"][0]
+        assert org["@type"] == "dfc-b:Organization"
+        assert "dfc-b:certifies" in org
+
+        cert = data["@graph"][1]
+        assert cert["@type"] == "dfc-b:Certification"
+        assert cert["dfc-b:operatorid"] == "CERT-AB-2026-001"
+        assert cert["dfc-b:certificationScore"] == "A+"
+        assert "dfc-b:isCertifiedBy" in cert
+
+    def test_ser016_parse_physical_place_geojson(self, load_fixture):
+        """SER-016: Parse PhysicalPlace with GeoJSON feature."""
+        data = load_fixture("physical-place/place_with_geojson.jsonld")
+
+        assert data["@type"] == "dfc-b:PhysicalPlace"
+        assert "dfc-b:hasGeoJsonFeature" in data
+        feature = data["dfc-b:hasGeoJsonFeature"]
+        assert "https://purl.org/geojson/vocab#geometry" in feature
+        assert "https://purl.org/geojson/vocab#coordinates" in feature["https://purl.org/geojson/vocab#geometry"]
