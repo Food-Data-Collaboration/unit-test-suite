@@ -51,14 +51,21 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
 /spec
   dfc_interop_test_spec.md       ← this document
 /fixtures
-  /enterprise
-    enterprise_full.jsonld       ← Organization with address, products, catalog
-    enterprise_minimal.jsonld    ← Organization with required fields only
-    enterprise_list.jsonld       ← @graph with multiple Organizations
+  /organization
+    organization_full.jsonld     ← Organization with address, products, catalog
+    organization_minimal.jsonld  ← Organization with required fields only
+    organization_list.jsonld     ← @graph with multiple Organizations
+    organization_certified.jsonld ← Organization with certifies/isCertifiedBy
   /supplied-product
     supplied_product_full.jsonld ← SuppliedProduct with all optional fields
     supplied_product_variant.jsonld ← Product with isVariantOf / hasVariant
     supplied_product_transformation.jsonld ← Product with AsPlannedTransformation
+  /variant
+    variant_with_options.jsonld  ← Variant with ProductOption and VariantCaracteristic
+  /sale-session
+    template_sale_session.jsonld ← TemplateSaleSession with iCal Vevent
+  /physical-place
+    place_with_geojson.jsonld    ← PhysicalPlace with GeoJSON Feature
   /catalog
     catalog_item.jsonld          ← CatalogItem with linked Offer
     catalog_list.jsonld          ← @graph list of CatalogItems
@@ -76,6 +83,7 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
     wrong_type_for_price.jsonld
     missing_required_field.jsonld
     malformed_iri.jsonld
+    variant_invalid_characteristic.jsonld ← Variant with broken characteristic
 /results
   /{platform-name}/results.xml
 ```
@@ -791,6 +799,164 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
 
 ---
 
+## 3.1 v2.0.0 New Tests
+
+### SER-012 — Parse a DFC Organization document (renamed from Enterprise)
+
+| | |
+|---|---|
+| **ID** | SER-012 |
+| **Category** | serialization |
+| **Priority** | mandatory |
+| **Fixture** | `organization/organization_full.jsonld` |
+| **Action** | Parse the fixture; access `@type`, `dfc-b:name`, `dfc-b:supplies`, and the nested `dfc-b:Address`; verify `@type` resolves to `dfc-b:Organization` |
+| **Expected Result** | All fields accessible without error; `@type` resolves to `dfc-b:Organization` (renamed from Enterprise in v2.0.0) |
+
+---
+
+### SER-013 — Parse a Variant with ProductOption and VariantCaracteristic
+
+| | |
+|---|---|
+| **ID** | SER-013 |
+| **Category** | serialization |
+| **Priority** | mandatory |
+| **Fixture** | `variant/variant_with_options.jsonld` |
+| **Action** | Parse the `@graph`; navigate from `dfc-b:Variant` to `dfc-b:hasVariantCaracteristic` to `dfc-b:ProductOption` and `dfc-b:ProductOptionValue` |
+| **Expected Result** | All variant option nodes accessible; `dfc-b:hasProductOption` and `dfc-b:hasProductOptionValue` resolve correctly |
+
+---
+
+### SER-014 — Parse a TemplateSaleSession with iCal Vevent
+
+| | |
+|---|---|
+| **ID** | SER-014 |
+| **Category** | serialization |
+| **Priority** | mandatory |
+| **Fixture** | `sale-session/template_sale_session.jsonld` |
+| **Action** | Parse the fixture; access `dfc-b:hasTemplateSaleSession` on an Organization, and navigate to the TemplateSaleSession with its `dfc-b:occursAt` iCal Vevent |
+| **Expected Result** | TemplateSaleSession accessible; `occursAt` resolves to a valid iCal Vevent with `dtstart` and `dtend` |
+
+---
+
+### SER-015 — Parse an Organization with certifies/isCertifiedBy
+
+| | |
+|---|---|
+| **ID** | SER-015 |
+| **Category** | serialization |
+| **Priority** | mandatory |
+| **Fixture** | `organization/organization_certified.jsonld` |
+| **Action** | Parse the fixture; navigate from `dfc-b:Organization` to `dfc-b:certifies` to `dfc-b:Certification`, and from Certification back via `dfc-b:isCertifiedBy` |
+| **Expected Result** | Bidirectional `certifies`/`isCertifiedBy` links accessible; Certification properties (`operatorid`, `certificationScore`, `certificationReference`) accessible |
+
+---
+
+### SER-016 — Parse a PhysicalPlace with GeoJSON feature
+
+| | |
+|---|---|
+| **ID** | SER-016 |
+| **Category** | serialization |
+| **Priority** | mandatory |
+| **Fixture** | `physical-place/place_with_geojson.jsonld` |
+| **Action** | Parse the fixture; access `dfc-b:hasGeoJsonFeature` on a PhysicalPlace and verify the GeoJSON Feature with geometry and properties |
+| **Expected Result** | GeoJSON Feature accessible; geometry (Point or Polygon) and properties nodes are parseable |
+
+---
+
+### SCH-010 — Validate VariantCaracteristic terms
+
+| | |
+|---|---|
+| **ID** | SCH-010 |
+| **Category** | schema |
+| **Priority** | mandatory |
+| **Fixture** | `variant/variant_with_options.jsonld` |
+| **Action** | Validate that `dfc-b:hasVariantCaracteristic` resolves to a valid `dfc-b:VariantCaracteristic` node with `dfc-b:hasProductOption` and `dfc-b:hasProductOptionValue` |
+| **Expected Result** | All variant characteristic terms accepted; no unknown IRI error |
+
+---
+
+### SCH-011 — Validate TemplateSaleSession with iCal Vevent
+
+| | |
+|---|---|
+| **ID** | SCH-011 |
+| **Category** | schema |
+| **Priority** | mandatory |
+| **Fixture** | `sale-session/template_sale_session.jsonld` |
+| **Action** | Validate that `dfc-b:hasTemplateSaleSession` resolves to a valid `dfc-b:TemplateSaleSession` with `dfc-b:occursAt` pointing to a `cal:Vevent` |
+| **Expected Result** | TemplateSaleSession and iCal Vevent terms accepted; no validation errors |
+
+---
+
+### SCH-012 — Reject Variant with invalid characteristic reference
+
+| | |
+|---|---|
+| **ID** | SCH-012 |
+| **Category** | schema |
+| **Priority** | mandatory |
+| **Fixture** | `invalid/variant_invalid_characteristic.jsonld` |
+| **Action** | Validate a `dfc-b:Variant` with a `dfc-b:hasVariantCaracteristic` pointing to a non-existent node |
+| **Expected Result** | Platform raises a validation error identifying the broken reference; does not silently accept the dangling link |
+
+---
+
+### EDG-016 — Organization equivalence with vcard:Organization
+
+| | |
+|---|---|
+| **ID** | EDG-016 |
+| **Category** | edge-case |
+| **Priority** | mandatory |
+| **Fixture** | *(inline)* |
+| **Action** | Parse a document where `@type` is `dfc-b:Organization` and verify it is equivalent to `vcard:Organization` per the v2.0.0 ontology |
+| **Expected Result** | Platform recognises `dfc-b:Organization` as equivalent to `http://www.w3.org/2006/vcard/ns#Organization`; no type mismatch error |
+
+---
+
+### EDG-017 — isVariantOf domain constraint
+
+| | |
+|---|---|
+| **ID** | EDG-017 |
+| **Category** | edge-case |
+| **Priority** | mandatory |
+| **Fixture** | *(inline)* |
+| **Action** | Parse a document where `dfc-b:isVariantOf` is used on a non-Variant class (e.g. `dfc-b:DefinedProduct`) |
+| **Expected Result** | Platform raises a domain constraint error; `isVariantOf` domain is `dfc-b:Variant` in v2.0.0, not `dfc-b:DefinedProduct` |
+
+---
+
+### EDG-018 — iCal Vevent temporal recurrence properties
+
+| | |
+|---|---|
+| **ID** | EDG-018 |
+| **Category** | edge-case |
+| **Priority** | mandatory |
+| **Fixture** | `sale-session/template_sale_session.jsonld` |
+| **Action** | Parse `dfc-b:occursAt` with an iCal Vevent containing `dtstart`, `dtend`, `freq`, and `interval` properties |
+| **Expected Result** | All iCal properties accessible; temporal recurrence (`freq`, `interval`) preserved without error |
+
+---
+
+### EDG-019 — GeoJSON Point and Polygon geometry types
+
+| | |
+|---|---|
+| **ID** | EDG-019 |
+| **Category** | edge-case |
+| **Priority** | mandatory |
+| **Fixture** | `physical-place/place_with_geojson.jsonld` |
+| **Action** | Parse `dfc-b:hasGeoJsonFeature` with both Point and Polygon geometry types |
+| **Expected Result** | Both geometry types accepted; coordinates array accessible; no geometry type confusion |
+
+---
+
 ## 4. Reporting Requirements
 
 ### JUnit XML format
@@ -800,17 +966,20 @@ All platforms MUST emit results as JUnit XML. The `classname` attribute of each 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites name="dfc-interop" time="2.345">
-  <testsuite name="serialization" tests="11" failures="0" errors="0" skipped="0">
+  <testsuite name="serialization" tests="16" failures="0" errors="0" skipped="0">
     <testcase classname="SER-001" name="Parse a DFC Organization document" time="0.021"/>
     <testcase classname="SER-002" name="Parse a SuppliedProduct with QuantitativeValue" time="0.018"/>
     <!-- ... -->
+    <testcase classname="SER-012" name="Parse a DFC Organization document (renamed)" time="0.019"/>
+    <testcase classname="SER-013" name="Parse Variant with ProductOption" time="0.022"/>
+    <!-- ... -->
   </testsuite>
-  <testsuite name="schema" tests="9" failures="0" errors="0" skipped="1">
+  <testsuite name="schema" tests="12" failures="0" errors="0" skipped="1">
     <testcase classname="SCH-009" name="Validate context version matches ontology version">
       <skipped message="Version pinning not yet implemented"/>
     </testcase>
   </testsuite>
-  <testsuite name="edge-case" tests="15" failures="1" errors="0" skipped="0">
+  <testsuite name="edge-case" tests="19" failures="1" errors="0" skipped="0">
     <testcase classname="EDG-006" name="Refrigeration flags as booleans vs strings" time="0.009">
       <failure message="String 'true' not accepted" type="AssertionError">
         Expected truthy result for dfc-b:refrigerated = "true", got parsing error.
