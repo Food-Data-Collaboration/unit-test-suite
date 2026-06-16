@@ -3,7 +3,7 @@
   "@graph": [
     {
       "@id": "http://example.org/api/dfc/Enterprises/10000",
-      "@type": "dfc-b:Enterprise",
+      "@type": "dfc-b:Organization",
       "dfc-b:name": "Fred's Farm",
       "dfc-b:hasDescription": "A wonderful organic farm",
       "dfc-b:email": "hello@fredsfarm.example",

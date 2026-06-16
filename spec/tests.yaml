@@ -15,12 +15,12 @@ specs:
       - id: SER-001
         category: serialization
         priority: mandatory
-        fixture: enterprise/enterprise_full.jsonld
+        fixture: organization/organization_full.jsonld
         action: >
           Parse the fixture; access @type, dfc-b:name, dfc-b:supplies, and the
           nested dfc-b:Address
         expected: >
-          All fields accessible without error; @type resolves to dfc-b:Enterprise
+          All fields accessible without error; @type resolves to dfc-b:Organization
 
       - id: SER-002
         category: serialization
@@ -69,12 +69,12 @@ specs:
       - id: SER-006
         category: serialization
         priority: mandatory
-        fixture: enterprise/enterprise_list.jsonld
+        fixture: organization/organization_list.jsonld
         action: >
           Parse the @graph array; iterate over all nodes and verify each is typed
-          dfc-b:Enterprise
+          dfc-b:Organization
         expected: >
-          Three Enterprise nodes retrieved; all @id values are absolute IRIs
+          Three Organization nodes retrieved; all @id values are absolute IRIs
 
       - id: SER-007
         category: serialization
@@ -139,7 +139,7 @@ specs:
       - id: SCH-001
         category: schema
         priority: mandatory
-        fixture: enterprise/enterprise_full.jsonld
+        fixture: organization/organization_full.jsonld
         action: >
           Validate the fixture against the DFC context and ontology
         expected: >
@@ -148,7 +148,7 @@ specs:
       - id: SCH-002
         category: schema
         priority: mandatory
-        fixture: enterprise/enterprise_minimal.jsonld
+        fixture: organization/organization_minimal.jsonld
         action: >
           Validate a document with only @id, @type, and dfc-b:name
         expected: >
@@ -241,11 +241,11 @@ specs:
           iterable collection in both cases
         inline_inputs:
           single_iri:
-            dfc-b:supplies: "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001"
+            dfc-b:supplies: "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10001"
           array_iri:
             dfc-b:supplies:
-              - "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001"
-              - "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002"
+              - "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10001"
+              - "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10002"
 
       - id: EDG-002
         category: edge-case

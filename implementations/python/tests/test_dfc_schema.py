@@ -7,19 +7,19 @@ class TestDFCSchemaValidation:
     """SCH-001 to SCH-009 tests for DFC interop."""
 
     def test_sch001_accept_valid_enterprise(self, load_fixture):
-        """SCH-001: Accept valid Enterprise with all required fields."""
-        data = load_fixture("enterprise/enterprise_full.jsonld")
+        """SCH-001: Accept valid Organization with all required fields."""
+        data = load_fixture("organization/organization_full.jsonld")
 
         assert "@graph" in data
         enterprise = data["@graph"][0]
-        assert enterprise["@type"] == "dfc-b:Enterprise"
+        assert enterprise["@type"] == "dfc-b:Organization"
         assert "dfc-b:name" in enterprise
 
     def test_sch002_accept_minimal_enterprise(self, load_fixture):
-        """SCH-002: Accept a minimal Enterprise (only required fields)."""
-        data = load_fixture("enterprise/enterprise_minimal.jsonld")
+        """SCH-002: Accept a minimal Organization (only required fields)."""
+        data = load_fixture("organization/organization_minimal.jsonld")
 
-        assert data["@type"] == "dfc-b:Enterprise"
+        assert data["@type"] == "dfc-b:Organization"
         assert data["dfc-b:name"] == "Minimal Farm"
 
     def test_sch003_reject_wrong_type_for_price(self, load_fixture):

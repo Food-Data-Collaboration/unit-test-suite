@@ -52,9 +52,9 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
   dfc_interop_test_spec.md       ← this document
 /fixtures
   /enterprise
-    enterprise_full.jsonld       ← Enterprise with address, products, catalog
-    enterprise_minimal.jsonld    ← Enterprise with required fields only
-    enterprise_list.jsonld       ← @graph with multiple Enterprises
+    enterprise_full.jsonld       ← Organization with address, products, catalog
+    enterprise_minimal.jsonld    ← Organization with required fields only
+    enterprise_list.jsonld       ← @graph with multiple Organizations
   /supplied-product
     supplied_product_full.jsonld ← SuppliedProduct with all optional fields
     supplied_product_variant.jsonld ← Product with isVariantOf / hasVariant
@@ -97,35 +97,35 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
 
 ## 1. Serialization & Deserialization
 
-### SER-001 — Parse a DFC Enterprise document
+### SER-001 — Parse a DFC Organization document
 
 | | |
 |---|---|
 | **ID** | SER-001 |
 | **Category** | serialization |
 | **Priority** | mandatory |
-| **Fixture** | `enterprise/enterprise_full.jsonld` |
+| **Fixture** | `organization/organization_full.jsonld` |
 | **Action** | Parse the fixture; access `@type`, `dfc-b:name`, `dfc-b:supplies`, and the nested `dfc-b:Address` |
-| **Expected Result** | All fields accessible without error; `@type` resolves to `dfc-b:Enterprise` |
+| **Expected Result** | All fields accessible without error; `@type` resolves to `dfc-b:Organization` |
 
-**Fixture** (`enterprise/enterprise_full.jsonld`):
+**Fixture** (`organization/organization_full.jsonld`):
 ```json
 {
   "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
     {
-      "@id": "http://example.org/api/dfc/Enterprises/10000",
-      "@type": "dfc-b:Enterprise",
+      "@id": "http://example.org/api/dfc/Organizations/10000",
+      "@type": "dfc-b:Organization",
       "dfc-b:name": "Fred's Farm",
       "dfc-b:hasDescription": "A wonderful organic farm",
       "dfc-b:email": "hello@fredsfarm.example",
       "dfc-b:VATnumber": "123 456",
       "dfc-b:hasAddress": "http://example.org/api/dfc/Addresses/40000",
       "dfc-b:supplies": [
-        "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001"
+        "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10001"
       ],
       "dfc-b:manages": [
-        "http://example.org/api/dfc/Enterprises/10000/CatalogItems/10001"
+        "http://example.org/api/dfc/Organizations/10000/CatalogItems/10001"
       ]
     },
     {
@@ -159,7 +159,7 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
 ```json
 {
   "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
-  "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+  "@id": "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10001",
   "@type": "dfc-b:SuppliedProduct",
   "dfc-b:name": "Basil Pesto",
   "dfc-b:description": "Fresh basil pesto, 100g jar",
@@ -203,17 +203,17 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
   "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
     {
-      "@id": "http://example.org/api/dfc/Enterprises/10000/CatalogItems/10001",
+      "@id": "http://example.org/api/dfc/Organizations/10000/CatalogItems/10001",
       "@type": "dfc-b:CatalogItem",
-      "dfc-b:references": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "dfc-b:references": "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10001",
       "dfc-b:sku": "PESTO-100",
       "dfc-b:stockLimitation": 20,
-      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/10000/customerCategories/10005/Offers/10001"
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Organizations/10000/customerCategories/10005/Offers/10001"
     },
     {
-      "@id": "http://example.org/api/dfc/Enterprises/10000/customerCategories/10005/Offers/10001",
+      "@id": "http://example.org/api/dfc/Organizations/10000/customerCategories/10005/Offers/10001",
       "@type": "dfc-b:Offer",
-      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/10000/customerCategories/10005",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Organizations/10000/customerCategories/10005",
       "dfc-b:stockLimitation": 20,
       "dfc-b:hasPrice": {
         "@type": "dfc-b:Price",
@@ -258,7 +258,7 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
       "@id": "http://example.org/api/dfc/orderline/line1",
       "@type": "dfc-b:OrderLine",
       "dfc-b:quantity": 4,
-      "dfc-b:concerns": "http://example.org/api/dfc/Enterprises/10000/customerCategories/10005/Offers/10001",
+      "dfc-b:concerns": "http://example.org/api/dfc/Organizations/10000/customerCategories/10005/Offers/10001",
       "dfc-b:partOf": "http://example.org/api/dfc/order/order1"
     },
     {
@@ -309,25 +309,25 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
 
 ---
 
-### SER-006 — Parse a paginated `@graph` list of Enterprises
+### SER-006 — Parse a paginated `@graph` list of Organizations
 
 | | |
 |---|---|
 | **ID** | SER-006 |
 | **Category** | serialization |
 | **Priority** | mandatory |
-| **Fixture** | `enterprise/enterprise_list.jsonld` |
-| **Action** | Parse the `@graph` array; iterate over all nodes and verify each is typed `dfc-b:Enterprise` |
-| **Expected Result** | Three Enterprise nodes retrieved; all `@id` values are absolute IRIs |
+| **Fixture** | `organization/organization_list.jsonld` |
+| **Action** | Parse the `@graph` array; iterate over all nodes and verify each is typed `dfc-b:Organization` |
+| **Expected Result** | Three Organization nodes retrieved; all `@id` values are absolute IRIs |
 
-**Fixture** (`enterprise/enterprise_list.jsonld`):
+**Fixture** (`organization/organization_list.jsonld`):
 ```json
 {
   "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
-    { "@id": "http://example.org/api/dfc/Enterprises/10000", "@type": "dfc-b:Enterprise" },
-    { "@id": "http://example.org/api/dfc/Enterprises/20000", "@type": "dfc-b:Enterprise" },
-    { "@id": "http://example.org/api/dfc/Enterprises/30000", "@type": "dfc-b:Enterprise" }
+    { "@id": "http://example.org/api/dfc/Organizations/10000", "@type": "dfc-b:Organization" },
+    { "@id": "http://example.org/api/dfc/Organizations/20000", "@type": "dfc-b:Organization" },
+    { "@id": "http://example.org/api/dfc/Organizations/30000", "@type": "dfc-b:Organization" }
   ]
 }
 ```
@@ -364,19 +364,19 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
   "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
     {
-      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "@id": "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10001",
       "@type": "dfc-b:SuppliedProduct",
       "dfc-b:name": "Basil Pesto",
       "dfc-b:hasVariant": [
-        "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002",
-        "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10003"
+        "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10002",
+        "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10003"
       ]
     },
     {
-      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002",
+      "@id": "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10002",
       "@type": "dfc-b:SuppliedProduct",
       "dfc-b:name": "Basil Pesto - 100g",
-      "dfc-b:isVariantOf": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "dfc-b:isVariantOf": "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10001",
       "dfc-b:hasQuantity": {
         "@type": "dfc-b:QuantitativeValue",
         "dfc-b:hasUnit": "dfc-m:Gram",
@@ -384,10 +384,10 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
       }
     },
     {
-      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10003",
+      "@id": "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10003",
       "@type": "dfc-b:SuppliedProduct",
       "dfc-b:name": "Basil Pesto - Case of 12",
-      "dfc-b:isVariantOf": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "dfc-b:isVariantOf": "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10001",
       "dfc-b:hasQuantity": {
         "@type": "dfc-b:QuantitativeValue",
         "dfc-b:hasUnit": "dfc-m:pack",
@@ -441,36 +441,36 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
 
 ## 2. Schema Validation
 
-### SCH-001 — Accept valid Enterprise with all required fields
+### SCH-001 — Accept valid Organization with all required fields
 
 | | |
 |---|---|
 | **ID** | SCH-001 |
 | **Category** | schema |
 | **Priority** | mandatory |
-| **Fixture** | `enterprise/enterprise_full.jsonld` |
+| **Fixture** | `organization/organization_full.jsonld` |
 | **Action** | Validate the fixture against the DFC context and ontology |
 | **Expected Result** | Zero validation errors; all `dfc-b:` terms are recognised from the ontology |
 
 ---
 
-### SCH-002 — Accept a minimal Enterprise (only required fields)
+### SCH-002 — Accept a minimal Organization (only required fields)
 
 | | |
 |---|---|
 | **ID** | SCH-002 |
 | **Category** | schema |
 | **Priority** | mandatory |
-| **Fixture** | `enterprise/enterprise_minimal.jsonld` |
+| **Fixture** | `organization/organization_minimal.jsonld` |
 | **Action** | Validate a document with only `@id`, `@type`, and `dfc-b:name` |
 | **Expected Result** | Passes validation; optional fields MUST NOT be required by the platform |
 
-**Fixture** (`enterprise/enterprise_minimal.jsonld`):
+**Fixture** (`organization/organization_minimal.jsonld`):
 ```json
 {
   "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
-  "@id": "http://example.org/api/dfc/Enterprises/99999",
-  "@type": "dfc-b:Enterprise",
+  "@id": "http://example.org/api/dfc/Organizations/99999",
+  "@type": "dfc-b:Organization",
   "dfc-b:name": "Minimal Farm"
 }
 ```
@@ -492,7 +492,7 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
 ```json
 {
   "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
-  "@id": "http://example.org/api/dfc/Enterprises/10000/customerCategories/10005/Offers/99999",
+  "@id": "http://example.org/api/dfc/Organizations/10000/customerCategories/10005/Offers/99999",
   "@type": "dfc-b:Offer",
   "dfc-b:hasPrice": "19.99"
 }
@@ -528,7 +528,7 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
 ```json
 {
   "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
-  "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/99998",
+  "@id": "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/99998",
   "@type": "dfc-b:SuppliedProduct",
   "dfc-b:description": "A product with no name"
 }
@@ -599,7 +599,7 @@ All test fixtures use these namespace prefixes, as defined in `context_2.0.0.jso
 | **Priority** | mandatory |
 | **Fixture** | *(inline)* |
 | **Action** | Parse one document where `dfc-b:supplies` is a single IRI string, and another where it is a JSON array of IRIs |
-| **Input A** | `"dfc-b:supplies": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001"` |
+| **Input A** | `"dfc-b:supplies": "http://example.org/api/dfc/Organizations/10000/SuppliedProducts/10001"` |
 | **Input B** | `"dfc-b:supplies": ["http://...10001", "http://...10002"]` |
 | **Expected Result** | Both forms are handled without error; the platform normalises to an iterable collection in both cases |
 
@@ -801,7 +801,7 @@ All platforms MUST emit results as JUnit XML. The `classname` attribute of each 
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites name="dfc-interop" time="2.345">
   <testsuite name="serialization" tests="11" failures="0" errors="0" skipped="0">
-    <testcase classname="SER-001" name="Parse a DFC Enterprise document" time="0.021"/>
+    <testcase classname="SER-001" name="Parse a DFC Organization document" time="0.021"/>
     <testcase classname="SER-002" name="Parse a SuppliedProduct with QuantitativeValue" time="0.018"/>
     <!-- ... -->
   </testsuite>
@@ -830,7 +830,7 @@ Place results at `/results/{platform-name}/results.xml`. Use a consistent lowerc
 
 | Version | Change |
 |---|---|
-| 2.0.0 | Aligned with DFC ontology v2.0.0 — namespace migration, Enterprise→Organization rename, new test cases for Variant, ProductOption, TemplateSaleSession |
+| 2.0.0 | Aligned with DFC ontology v2.0.0 — namespace migration, Organization→Organization rename, new test cases for Variant, ProductOption, TemplateSaleSession |
 | 1.0.0 | Initial release — 35 test cases across 3 categories, aligned with DFC ontology v1.16.0 |
 
 Test IDs are permanent and will never be reassigned. When the DFC ontology version increments, a new spec version will be issued. Platforms will have a minimum 4-week migration window before new tests become mandatory.

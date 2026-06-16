@@ -108,7 +108,7 @@ Each test case in the YAML spec has an `action` and `expected` field. Your asser
 Use the test ID as the `classname` in JUnit XML:
 
 ```xml
-<testcase classname="SER-001" name="Parse a DFC Enterprise document" time="0.021"/>
+<testcase classname="SER-001" name="Parse a DFC Organization document" time="0.021"/>
 ```
 
 The `name` field should match the test description from the spec.
@@ -143,7 +143,7 @@ All platforms MUST emit results in this format:
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites name="dfc-interop" time="2.345">
   <testsuite name="serialization" tests="11" failures="0" errors="0" skipped="0">
-    <testcase classname="SER-001" name="Parse a DFC Enterprise document" time="0.021"/>
+    <testcase classname="SER-001" name="Parse a DFC Organization document" time="0.021"/>
     <testcase classname="SER-002" name="Parse a SuppliedProduct with QuantitativeValue" time="0.018"/>
   </testsuite>
   <testsuite name="schema" tests="9" failures="0" errors="0" skipped="1">

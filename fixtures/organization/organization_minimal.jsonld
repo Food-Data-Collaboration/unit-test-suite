@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@id": "http://example.org/api/dfc/Enterprises/99999",
-  "@type": "dfc-b:Enterprise",
+  "@type": "dfc-b:Organization",
   "dfc-b:name": "Minimal Farm"
 }

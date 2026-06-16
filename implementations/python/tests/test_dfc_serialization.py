@@ -7,12 +7,12 @@ class TestDFCSerialization:
     """SER-001 to SER-011 tests for DFC interop."""
 
     def test_ser001_parse_enterprise(self, load_fixture):
-        """SER-001: Parse a DFC Enterprise document."""
-        data = load_fixture("enterprise/enterprise_full.jsonld")
+        """SER-001: Parse a DFC Organization document."""
+        data = load_fixture("organization/organization_full.jsonld")
 
         assert "@graph" in data
         enterprise = data["@graph"][0]
-        assert enterprise["@type"] == "dfc-b:Enterprise"
+        assert enterprise["@type"] == "dfc-b:Organization"
         assert enterprise["dfc-b:name"] == "Fred's Farm"
         assert "dfc-b:supplies" in enterprise
         assert "dfc-b:hasAddress" in enterprise
@@ -62,13 +62,13 @@ class TestDFCSerialization:
         assert "dfc-b:hasAddress" in data
 
     def test_ser006_parse_enterprise_list(self, load_fixture):
-        """SER-006: Parse a paginated @graph list of Enterprises."""
-        data = load_fixture("enterprise/enterprise_list.jsonld")
+        """SER-006: Parse a paginated @graph list of Organizations."""
+        data = load_fixture("organization/organization_list.jsonld")
 
         assert "@graph" in data
         assert len(data["@graph"]) == 3
         for node in data["@graph"]:
-            assert node["@type"] == "dfc-b:Enterprise"
+            assert node["@type"] == "dfc-b:Organization"
             assert node["@id"].startswith("http://")
 
     def test_ser008_parse_variant(self, load_fixture):

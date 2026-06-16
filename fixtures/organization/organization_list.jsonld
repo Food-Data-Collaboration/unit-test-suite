@@ -1,0 +1,8 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
+  "@graph": [
+    { "@id": "http://example.org/api/dfc/Enterprises/10000", "@type": "dfc-b:Organization" },
+    { "@id": "http://example.org/api/dfc/Enterprises/20000", "@type": "dfc-b:Organization" },
+    { "@id": "http://example.org/api/dfc/Enterprises/30000", "@type": "dfc-b:Organization" }
+  ]
+}
