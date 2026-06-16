@@ -1,0 +1,23 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
+  "@id": "http://example.org/api/dfc/PhysicalPlaces/10001",
+  "@type": "dfc-b:PhysicalPlace",
+  "dfc-b:name": "Farm Shop",
+  "dfc-b:hasAddress": {
+    "@type": "dfc-b:Address",
+    "dfc-b:street": "42 Doveton Street",
+    "dfc-b:city": "London",
+    "dfc-b:postcode": "SW1A 1AA",
+    "dfc-b:hasCountry": "GB"
+  },
+  "dfc-b:hasGeoJsonFeature": {
+    "@type": "https://purl.org/geojson/vocab#Feature",
+    "https://purl.org/geojson/vocab#geometry": {
+      "@type": "https://purl.org/geojson/vocab#Point",
+      "https://purl.org/geojson/vocab#coordinates": [-0.1419, 51.5014]
+    },
+    "https://purl.org/geojson/vocab#properties": {
+      "name": "Farm Shop Location"
+    }
+  }
+}

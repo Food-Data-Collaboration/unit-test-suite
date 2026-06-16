@@ -1,0 +1,44 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
+  "@graph": [
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Basil Pesto",
+      "dfc-b:hasVariant": [
+        "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002",
+        "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10003"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002",
+      "@type": "dfc-b:Variant",
+      "dfc-b:name": "Basil Pesto - 100g Jar",
+      "dfc-b:isVariantOf": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "dfc-b:hasVariantCaracteristic": "http://example.org/api/dfc/Enterprises/10000/VariantCaracteristics/10001"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10003",
+      "@type": "dfc-b:Variant",
+      "dfc-b:name": "Basil Pesto - Case of 12",
+      "dfc-b:isVariantOf": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
+      "dfc-b:hasVariantCaracteristic": "http://example.org/api/dfc/Enterprises/10000/VariantCaracteristics/10001"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/VariantCaracteristics/10001",
+      "@type": "dfc-b:VariantCaracteristic",
+      "dfc-b:hasProductOption": "http://example.org/api/dfc/Enterprises/10000/ProductOptions/10001",
+      "dfc-b:hasProductOptionValue": "http://example.org/api/dfc/Enterprises/10000/ProductOptionValues/10001"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/ProductOptions/10001",
+      "@type": "dfc-b:ProductOption",
+      "dfc-b:name": "Package Size"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/ProductOptionValues/10001",
+      "@type": "dfc-b:ProductOptionValue",
+      "dfc-b:name": "100g"
+    }
+  ]
+}

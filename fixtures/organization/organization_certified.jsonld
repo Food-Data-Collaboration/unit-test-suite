@@ -1,0 +1,20 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
+  "@graph": [
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Fred's Farm",
+      "dfc-b:certifies": "http://example.org/api/dfc/Certifications/10001"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Certifications/10001",
+      "@type": "dfc-b:Certification",
+      "dfc-b:name": "Organic AB Certification",
+      "dfc-b:operatorid": "CERT-AB-2026-001",
+      "dfc-b:certificationScore": "A+",
+      "dfc-b:certificationReference": "https://certification.example.org/ab/10001",
+      "dfc-b:isCertifiedBy": "http://example.org/api/dfc/Enterprises/10000"
+    }
+  ]
+}

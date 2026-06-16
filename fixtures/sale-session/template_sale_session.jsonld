@@ -1,0 +1,25 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
+  "@graph": [
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Fred's Farm",
+      "dfc-b:hasTemplateSaleSession": "http://example.org/api/dfc/Enterprises/10000/TemplateSaleSessions/10001"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/TemplateSaleSessions/10001",
+      "@type": "dfc-b:TemplateSaleSession",
+      "dfc-b:occursAt": "http://example.org/api/dfc/Enterprises/10000/Vevents/10001"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/10000/Vevents/10001",
+      "@type": "http://www.w3.org/2002/12/cal/icaltz#Vevent",
+      "http://www.w3.org/2002/12/cal/icaltz#dtstart": "2026-06-01T09:00:00+01:00",
+      "http://www.w3.org/2002/12/cal/icaltz#dtend": "2026-06-01T12:00:00+01:00",
+      "http://www.w3.org/2002/12/cal/icaltz#freq": "WEEKLY",
+      "http://www.w3.org/2002/12/cal/icaltz#interval": 1,
+      "http://www.w3.org/2002/12/cal/icaltz#byday": "SA"
+    }
+  ]
+}

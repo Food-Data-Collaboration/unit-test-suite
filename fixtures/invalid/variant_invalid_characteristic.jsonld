@@ -1,0 +1,7 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
+  "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10002",
+  "@type": "dfc-b:Variant",
+  "dfc-b:name": "Basil Pesto - 100g Jar",
+  "dfc-b:hasVariantCaracteristic": "http://example.org/api/dfc/nonexistent/characteristics/99999"
+}
