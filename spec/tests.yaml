@@ -427,6 +427,146 @@ specs:
           Both platforms expand the term to the same absolute IRI; no
           platform-local rewriting occurs
 
+      # =============================================================================
+      # v2.0.0 New Tests (SER-012 to SER-016, SCH-010 to SCH-012, EDG-016 to EDG-019)
+      # =============================================================================
+
+      - id: SER-012
+        category: serialization
+        priority: mandatory
+        fixture: organization/organization_full.jsonld
+        action: >
+          Parse the fixture; access @type, dfc-b:name, dfc-b:supplies, and the
+          nested dfc-b:Address; verify @type resolves to dfc-b:Organization
+        expected: >
+          All fields accessible without error; @type resolves to
+          dfc-b:Organization (renamed from Enterprise in v2.0.0)
+
+      - id: SER-013
+        category: serialization
+        priority: mandatory
+        fixture: variant/variant_with_options.jsonld
+        action: >
+          Parse the @graph; navigate from dfc-b:Variant to
+          dfc-b:hasVariantCaracteristic to dfc-b:ProductOption and
+          dfc-b:ProductOptionValue
+        expected: >
+          All variant option nodes accessible; dfc-b:hasProductOption and
+          dfc-b:hasProductOptionValue resolve correctly
+
+      - id: SER-014
+        category: serialization
+        priority: mandatory
+        fixture: sale-session/template_sale_session.jsonld
+        action: >
+          Parse the fixture; access dfc-b:hasTemplateSaleSession on an
+          Organization, and navigate to the TemplateSaleSession with its
+          dfc-b:occursAt iCal Vevent
+        expected: >
+          TemplateSaleSession accessible; occursAt resolves to a valid iCal
+          Vevent with dtstart and dtend
+
+      - id: SER-015
+        category: serialization
+        priority: mandatory
+        fixture: organization/organization_certified.jsonld
+        action: >
+          Parse the fixture; navigate from dfc-b:Organization to
+          dfc-b:certifies to dfc-b:Certification, and from Certification back
+          via dfc-b:isCertifiedBy
+        expected: >
+          Bidirectional certifies/isCertifiedBy links accessible; Certification
+          properties (operatorid, certificationScore, certificationReference)
+          accessible
+
+      - id: SER-016
+        category: serialization
+        priority: mandatory
+        fixture: physical-place/place_with_geojson.jsonld
+        action: >
+          Parse the fixture; access dfc-b:hasGeoJsonFeature on a PhysicalPlace
+          and verify the GeoJSON Feature with geometry and properties
+        expected: >
+          GeoJSON Feature accessible; geometry (Point or Polygon) and properties
+          nodes are parseable
+
+      - id: SCH-010
+        category: schema
+        priority: mandatory
+        fixture: variant/variant_with_options.jsonld
+        action: >
+          Validate that dfc-b:hasVariantCaracteristic resolves to a valid
+          dfc-b:VariantCaracteristic node with dfc-b:hasProductOption and
+          dfc-b:hasProductOptionValue
+        expected: >
+          All variant characteristic terms accepted; no unknown IRI error
+
+      - id: SCH-011
+        category: schema
+        priority: mandatory
+        fixture: sale-session/template_sale_session.jsonld
+        action: >
+          Validate that dfc-b:hasTemplateSaleSession resolves to a valid
+          dfc-b:TemplateSaleSession with dfc-b:occursAt pointing to a cal:Vevent
+        expected: >
+          TemplateSaleSession and iCal Vevent terms accepted; no validation
+          errors
+
+      - id: SCH-012
+        category: schema
+        priority: mandatory
+        fixture: invalid/variant_invalid_characteristic.jsonld
+        action: >
+          Validate a dfc-b:Variant with a dfc-b:hasVariantCaracteristic pointing
+          to a non-existent node
+        expected: >
+          Platform raises a validation error identifying the broken reference;
+          does not silently accept the dangling link
+
+      - id: EDG-016
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse a document where @type is dfc-b:Organization and verify it is
+          equivalent to vcard:Organization per the v2.0.0 ontology
+        expected: >
+          Platform recognises dfc-b:Organization as equivalent to
+          http://www.w3.org/2006/vcard/ns#Organization; no type mismatch error
+
+      - id: EDG-017
+        category: edge-case
+        priority: mandatory
+        fixture: null
+        action: >
+          Parse a document where dfc-b:isVariantOf is used on a non-Variant
+          class (e.g. dfc-b:DefinedProduct)
+        expected: >
+          Platform raises a domain constraint error; isVariantOf domain is
+          dfc-b:Variant in v2.0.0, not dfc-b:DefinedProduct
+
+      - id: EDG-018
+        category: edge-case
+        priority: mandatory
+        fixture: sale-session/template_sale_session.jsonld
+        action: >
+          Parse dfc-b:occursAt with an iCal Vevent containing dtstart, dtend,
+          freq, and interval properties
+        expected: >
+          All iCal properties accessible; temporal recurrence (freq, interval)
+          preserved without error
+
+      - id: EDG-019
+        category: edge-case
+        priority: mandatory
+        fixture: physical-place/place_with_geojson.jsonld
+        action: >
+          Parse dfc-b:hasGeoJsonFeature with both Point and Polygon geometry
+          types
+        expected: >
+          Both geometry types accepted; coordinates array accessible; no
+          geometry type confusion
+
   - name: jsonld-interop
     version: "1.0.0"
     description: "Generic JSON-LD interoperability tests for serialization, schema validation, and edge cases"
