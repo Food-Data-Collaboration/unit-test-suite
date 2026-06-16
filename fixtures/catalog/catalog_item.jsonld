@@ -1,5 +1,5 @@
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
     {
       "@id": "http://example.org/api/dfc/Enterprises/10000/CatalogItems/10001",

@@ -4,7 +4,7 @@
 **Status:** Draft
 **Last Updated:** 2026-06-16
 **Ontology version tested:** 1.16.0
-**Context URL:** `https://w3id.org/dfc/ontology/context/context_1.16.0.json`
+**Context URL:** `https://w3id.org/dfc/ontology/context/context_2.0.0.json`
 
 ---
 
@@ -32,16 +32,16 @@ This document defines the canonical test suite for platforms implementing the Da
 
 ## DFC Ontology Prefixes
 
-All test fixtures use these namespace prefixes, as defined in `context_1.16.0.json`:
+All test fixtures use these namespace prefixes, as defined in `context_2.0.0.json`:
 
 | Prefix | Namespace |
 |---|---|
-| `dfc-b:` | `http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#` |
-| `dfc-p:` | `http://static.datafoodconsortium.org/ontologies/DFC_ProductOntology.owl#` |
-| `dfc-t:` | `http://static.datafoodconsortium.org/ontologies/DFC_TechnicalOntology.owl#` |
-| `dfc-m:` | `http://static.datafoodconsortium.org/data/measures.rdf#` |
-| `dfc-pt:` | `http://static.datafoodconsortium.org/data/productTypes.rdf#` |
-| `dfc-f:` | `http://static.datafoodconsortium.org/data/facets.rdf#` |
+| `dfc-b:` | `http://w3id.org/dfc/ontology/v2.0.0/src/DFC_BusinessOntology.owl#` |
+| `dfc-p:` | `http://w3id.org/dfc/ontology/v2.0.0/src/DFC_ProductOntology.owl#` |
+| `dfc-t:` | `http://w3id.org/dfc/ontology/v2.0.0/src/DFC_TechnicalOntology.owl#` |
+| `dfc-m:` | `http://w3id.org/dfc/taxonomies/v2.0.0/measures.rdf#` |
+| `dfc-pt:` | `http://w3id.org/dfc/taxonomies/v2.0.0/productTypes.rdf#` |
+| `dfc-f:` | `http://w3id.org/dfc/taxonomies/v2.0.0/facets.rdf#` |
 
 ---
 
@@ -111,7 +111,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`enterprise/enterprise_full.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
     {
       "@id": "http://example.org/api/dfc/Enterprises/10000",
@@ -158,7 +158,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`supplied-product/supplied_product_full.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
   "@type": "dfc-b:SuppliedProduct",
   "dfc-b:name": "Basil Pesto",
@@ -200,7 +200,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`catalog/catalog_item.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
     {
       "@id": "http://example.org/api/dfc/Enterprises/10000/CatalogItems/10001",
@@ -242,7 +242,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`order/order_pickup.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
     {
       "@id": "http://example.org/api/dfc/order/order1",
@@ -297,7 +297,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`person/person.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@id": "http://example.org/api/dfc/Persons/10000",
   "@type": "dfc-b:Person",
   "dfc-b:firstName": "Ali",
@@ -323,7 +323,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`enterprise/enterprise_list.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
     { "@id": "http://example.org/api/dfc/Enterprises/10000", "@type": "dfc-b:Enterprise" },
     { "@id": "http://example.org/api/dfc/Enterprises/20000", "@type": "dfc-b:Enterprise" },
@@ -361,7 +361,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`supplied-product/supplied_product_variant.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@graph": [
     {
       "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/10001",
@@ -468,7 +468,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`enterprise/enterprise_minimal.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@id": "http://example.org/api/dfc/Enterprises/99999",
   "@type": "dfc-b:Enterprise",
   "dfc-b:name": "Minimal Farm"
@@ -491,7 +491,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`invalid/wrong_type_for_price.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@id": "http://example.org/api/dfc/Enterprises/10000/customerCategories/10005/Offers/99999",
   "@type": "dfc-b:Offer",
   "dfc-b:hasPrice": "19.99"
@@ -527,7 +527,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 **Fixture** (`invalid/missing_required_field.jsonld`):
 ```json
 {
-  "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json",
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
   "@id": "http://example.org/api/dfc/Enterprises/10000/SuppliedProducts/99998",
   "@type": "dfc-b:SuppliedProduct",
   "dfc-b:description": "A product with no name"
@@ -583,7 +583,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 | **Category** | schema |
 | **Priority** | optional |
 | **Fixture** | All fixtures |
-| **Action** | Confirm the `@context` URL in each fixture references the same ontology version the platform was built against (currently `context_1.16.0.json`) |
+| **Action** | Confirm the `@context` URL in each fixture references the same ontology version the platform was built against (currently `context_2.0.0.json`) |
 | **Expected Result** | No version mismatch detected; or platform raises a meaningful warning if context versions differ |
 
 ---
@@ -642,7 +642,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 | **Priority** | mandatory |
 | **Fixture** | *(inline)* |
 | **Action** | Parse a `POST` request body where the object uses `"@id": "#"` as a client-assigned placeholder |
-| **Input** | `{ "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json", "@id": "#", "@type": "dfc-b:CatalogItem", "dfc-b:sku": "TEST" }` |
+| **Input** | `{ "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json", "@id": "#", "@type": "dfc-b:CatalogItem", "dfc-b:sku": "TEST" }` |
 | **Expected Result** | Document is accepted for write operations; platform assigns a real IRI before storing; `"#"` is not persisted as the object's identifier |
 
 ---
@@ -721,7 +721,7 @@ All test fixtures use these namespace prefixes, as defined in `context_1.16.0.js
 | **Category** | edge-case |
 | **Priority** | mandatory |
 | **Fixture** | *(inline)* |
-| **Action** | Parse `{ "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json", "@graph": [] }` |
+| **Action** | Parse `{ "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json", "@graph": [] }` |
 | **Expected Result** | Returns an empty collection; no error thrown; platform does not interpret this as a malformed document |
 
 ---

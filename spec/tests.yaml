@@ -6,7 +6,7 @@ specs:
   - name: dfc-interop
     version: "1.0.0"
     ontology_version: "1.16.0"
-    context_url: "https://w3id.org/dfc/ontology/context/context_1.16.0.json"
+    context_url: "https://w3id.org/dfc/ontology/context/context_2.0.0.json"
     description: "DFC Standard interoperability tests for JSON-LD serialization, schema validation, and edge cases"
     tests:
       # =============================================================================
@@ -221,7 +221,7 @@ specs:
         fixture: "*"
         action: >
           Confirm the @context URL in each fixture references the same ontology
-          version the platform was built against (currently context_1.16.0.json)
+          version the platform was built against (currently context_2.0.0.json)
         expected: >
           No version mismatch detected; or platform raises a meaningful warning if
           context versions differ
@@ -281,7 +281,7 @@ specs:
         inline_inputs:
           - "@context":
               - "@base": "http://myplatform.example/"
-              - dfc-b: "http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#"
+              - dfc-b: "http://w3id.org/dfc/ontology/v2.0.0/src/DFC_BusinessOntology.owl#"
             "@id": "suppliedProduct/item1"
             "@type": "dfc-b:SuppliedProduct"
 
@@ -296,7 +296,7 @@ specs:
           Document is accepted for write operations; platform assigns a real IRI
           before storing; "#" is not persisted as the object's identifier
         inline_inputs:
-          "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json"
+          "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json"
           "@id": "#"
           "@type": "dfc-b:CatalogItem"
           dfc-b:sku: "TEST"
@@ -370,7 +370,7 @@ specs:
           Returns an empty collection; no error thrown; platform does not interpret
           this as a malformed document
         inline_inputs:
-          "@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json"
+          "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json"
           "@graph": []
 
       - id: EDG-011

@@ -45,7 +45,7 @@ class TestDFCEdgeCases:
 
     def test_edg010_empty_graph(self):
         """EDG-010: Empty @graph array."""
-        data = {"@context": "https://w3id.org/dfc/ontology/context/context_1.16.0.json", "@graph": []}
+        data = {"@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json", "@graph": []}
 
         assert "@graph" in data
         assert len(data["@graph"]) == 0

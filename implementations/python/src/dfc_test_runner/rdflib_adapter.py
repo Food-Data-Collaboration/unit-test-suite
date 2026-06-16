@@ -8,9 +8,9 @@ from rdflib.namespace import RDF, XSD
 
 from .adapter import TestAdapter
 
-DFC_B = Namespace("http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#")
-DFC_M = Namespace("http://static.datafoodconsortium.org/data/measures.rdf#")
-DFC_PT = Namespace("http://static.datafoodconsortium.org/data/productTypes.rdf#")
+DFC_B = Namespace("http://w3id.org/dfc/ontology/v2.0.0/src/DFC_BusinessOntology.owl#")
+DFC_M = Namespace("http://w3id.org/dfc/taxonomies/v2.0.0/measures.rdf#")
+DFC_PT = Namespace("http://w3id.org/dfc/taxonomies/v2.0.0/productTypes.rdf#")
 
 
 class RDFLibAdapter(TestAdapter):
