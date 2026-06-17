@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+require "rspec/core/rake_task"
+require "rspec_junit_formatter"
+
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.pattern = "spec/**/*_spec.rb"
+  t.formatter = RSpec::Core::Formatters::JUnitFormatter
+  t.formatter_output_path = "../../results/ruby-ofn/results.xml"
+end
+
+task default: :spec
