@@ -1,0 +1,593 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
+  "@graph": [
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/beef-topside-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Beef - Topside",
+      "dfc-b:description": "Beef - Topside from Somerset Levels Collective — 1 kg. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:beef",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 161
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/free-range-eggs-12-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Free Range Eggs (12)",
+      "dfc-b:description": "Free Range Eggs (12) from Somerset Levels Collective — 12 eggs. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:egg",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 149
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/plums-victoria-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Plums - Victoria",
+      "dfc-b:description": "Plums - Victoria from Somerset Levels Collective — 500 g. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:plum",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 31
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/beetroot-bunch-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Beetroot - Bunch",
+      "dfc-b:description": "Beetroot - Bunch from Somerset Levels Collective — bunch. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:beetroot",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 161
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/cucumber-5",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Cucumber",
+      "dfc-b:description": "Cucumber from Somerset Levels Collective — 1 piece. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:cucumber",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 159
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/leeks-trimmed-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Leeks - Trimmed",
+      "dfc-b:description": "Leeks - Trimmed from Wye Valley Pastures — 500 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:leek",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:totalTheoreticalStock": 111
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/seasonal-veg-box-small-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Seasonal Veg Box - Small",
+      "dfc-b:description": "Seasonal Veg Box - Small from Wye Valley Pastures — 1 box. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:vegetable",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:totalTheoreticalStock": 178
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/apple-juice-cloudy-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Apple Juice - Cloudy",
+      "dfc-b:description": "Apple Juice - Cloudy from Wye Valley Pastures — 1 L. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:fruit-juice",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Litre",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:totalTheoreticalStock": 125
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/onions-brown-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Onions - Brown",
+      "dfc-b:description": "Onions - Brown from Wye Valley Pastures — 1 kg. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:onion",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:totalTheoreticalStock": 88
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/pears-conference-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Pears - Conference",
+      "dfc-b:description": "Pears - Conference from Bramble Hill Market Garden — 1 kg. Grown/produced in East Sussex.",
+      "dfc-b:hasType": "dfc-pt:pear",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:totalTheoreticalStock": 109
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/raspberries-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Raspberries",
+      "dfc-b:description": "Raspberries from Bramble Hill Market Garden — 200 g. Grown/produced in East Sussex.",
+      "dfc-b:hasType": "dfc-pt:raspberry",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 200.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:totalTheoreticalStock": 104
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/free-range-eggs-6-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Free Range Eggs (6)",
+      "dfc-b:description": "Free Range Eggs (6) from Bramble Hill Market Garden — 6 eggs. Grown/produced in East Sussex.",
+      "dfc-b:hasType": "dfc-pt:egg",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:totalTheoreticalStock": 27
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/potatoes-maris-piper-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Potatoes - Maris Piper",
+      "dfc-b:description": "Potatoes - Maris Piper from Bramble Hill Market Garden — 1 kg. Grown/produced in East Sussex.",
+      "dfc-b:hasType": "dfc-pt:potato",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:totalTheoreticalStock": 47
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/sourdough-loaf-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Sourdough Loaf",
+      "dfc-b:description": "Sourdough Loaf from Blackdown Hills Orchard — 1 loaf. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:bread",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:totalTheoreticalStock": 85
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/strawberries-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Strawberries",
+      "dfc-b:description": "Strawberries from Blackdown Hills Orchard — 250 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:strawberry",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:totalTheoreticalStock": 113
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/raw-wildflower-honey-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Raw Wildflower Honey",
+      "dfc-b:description": "Raw Wildflower Honey from Blackdown Hills Orchard — 340 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:honey",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:totalTheoreticalStock": 96
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/kale-curly-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Kale - Curly",
+      "dfc-b:description": "Kale - Curly from Blackdown Hills Orchard — 200 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:kale",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 200.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:totalTheoreticalStock": 69
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/rye-bread-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Rye Bread",
+      "dfc-b:description": "Rye Bread from Cotswold Edge Dairy — 1 loaf. Grown/produced in Gloucestershire.",
+      "dfc-b:hasType": "dfc-pt:bread",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:totalTheoreticalStock": 97
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/butter-salted-block-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Butter - Salted Block",
+      "dfc-b:description": "Butter - Salted Block from Cotswold Edge Dairy — 250 g. Grown/produced in Gloucestershire.",
+      "dfc-b:hasType": "dfc-pt:butter",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:totalTheoreticalStock": 133
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/whole-milk-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Whole Milk",
+      "dfc-b:description": "Whole Milk from Cotswold Edge Dairy — 1 L. Grown/produced in Gloucestershire.",
+      "dfc-b:hasType": "dfc-pt:milk",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Litre",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:totalTheoreticalStock": 188
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/chicken-whole-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Chicken - Whole",
+      "dfc-b:description": "Chicken - Whole from Cotswold Edge Dairy — 1.5 kg. Grown/produced in Gloucestershire.",
+      "dfc-b:hasType": "dfc-pt:chicken",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:totalTheoreticalStock": 192
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/heritage-tomatoes-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Heritage Tomatoes",
+      "dfc-b:description": "Heritage Tomatoes from Cornish Hedgerow Produce — 500 g. Grown/produced in North Yorkshire.",
+      "dfc-b:hasType": "dfc-pt:tomato",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:totalTheoreticalStock": 136
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/lamb-leg-joint-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Lamb - Leg Joint",
+      "dfc-b:description": "Lamb - Leg Joint from Cornish Hedgerow Produce — 1 kg. Grown/produced in North Yorkshire.",
+      "dfc-b:hasType": "dfc-pt:lamb",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:totalTheoreticalStock": 82
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/apples-mixed-heritage-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Apples - Mixed Heritage",
+      "dfc-b:description": "Apples - Mixed Heritage from Cornish Hedgerow Produce — 1 kg. Grown/produced in North Yorkshire.",
+      "dfc-b:hasType": "dfc-pt:apples",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:totalTheoreticalStock": 76
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/pork-shoulder-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Pork - Shoulder",
+      "dfc-b:description": "Pork - Shoulder from Cornish Hedgerow Produce — 1 kg. Grown/produced in North Yorkshire.",
+      "dfc-b:hasType": "dfc-pt:pork",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:totalTheoreticalStock": 136
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/basil-pesto-100g-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Basil Pesto - 100g",
+      "dfc-b:description": "Basil Pesto - 100g from Tamar Valley Smallholding — 100 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:processed-vegetable",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:totalTheoreticalStock": 160
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/mature-cheddar-cow-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Mature Cheddar (Cow)",
+      "dfc-b:description": "Mature Cheddar (Cow) from Tamar Valley Smallholding — 250 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:mature-cheese",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:totalTheoreticalStock": 153
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/courgettes-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Courgettes",
+      "dfc-b:description": "Courgettes from Tamar Valley Smallholding — 500 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:courgette",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:totalTheoreticalStock": 105
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/jam-strawberry-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Jam - Strawberry",
+      "dfc-b:description": "Jam - Strawberry from Tamar Valley Smallholding — 340 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:jam",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:totalTheoreticalStock": 200
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/carrots-washed-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Carrots - Washed",
+      "dfc-b:description": "Carrots - Washed from Northumbrian Moor Free Range — 1 kg. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:carrot",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 167
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/spinach-baby-leaf-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Spinach - Baby Leaf",
+      "dfc-b:description": "Spinach - Baby Leaf from Northumbrian Moor Free Range — 150 g. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:spinach",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 150.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 157
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/fresh-goats-cheese-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Fresh Goats Cheese",
+      "dfc-b:description": "Fresh Goats Cheese from Northumbrian Moor Free Range — 150 g. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:goat-fresh-cheese",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 150.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 131
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/potatoes-maris-piper-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Potatoes - Maris Piper",
+      "dfc-b:description": "Potatoes - Maris Piper from Northumbrian Moor Free Range — 1 kg. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:potato",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 139
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/sourdough-loaf-5",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Sourdough Loaf",
+      "dfc-b:description": "Sourdough Loaf from Northumbrian Moor Free Range — 1 loaf. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:bread",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 41
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/pears-conference-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Pears - Conference",
+      "dfc-b:description": "Pears - Conference from Weald & Down Organics — 1 kg. Grown/produced in Herefordshire.",
+      "dfc-b:hasType": "dfc-pt:pear",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:totalTheoreticalStock": 117
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/mature-cheddar-cow-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Mature Cheddar (Cow)",
+      "dfc-b:description": "Mature Cheddar (Cow) from Weald & Down Organics — 250 g. Grown/produced in Herefordshire.",
+      "dfc-b:hasType": "dfc-pt:mature-cheese",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:totalTheoreticalStock": 158
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/jam-strawberry-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Jam - Strawberry",
+      "dfc-b:description": "Jam - Strawberry from Weald & Down Organics — 340 g. Grown/produced in Herefordshire.",
+      "dfc-b:hasType": "dfc-pt:jam",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:totalTheoreticalStock": 27
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/raw-wildflower-honey-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Raw Wildflower Honey",
+      "dfc-b:description": "Raw Wildflower Honey from Weald & Down Organics — 340 g. Grown/produced in Herefordshire.",
+      "dfc-b:hasType": "dfc-pt:honey",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:totalTheoreticalStock": 191
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/chicken-whole-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Chicken - Whole",
+      "dfc-b:description": "Chicken - Whole from Moorland Field Farm — 1.5 kg. Grown/produced in Devon.",
+      "dfc-b:hasType": "dfc-pt:chicken",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:totalTheoreticalStock": 61
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/spinach-baby-leaf-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Spinach - Baby Leaf",
+      "dfc-b:description": "Spinach - Baby Leaf from Moorland Field Farm — 150 g. Grown/produced in Devon.",
+      "dfc-b:hasType": "dfc-pt:spinach",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 150.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:totalTheoreticalStock": 121
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/apple-juice-cloudy-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Apple Juice - Cloudy",
+      "dfc-b:description": "Apple Juice - Cloudy from Moorland Field Farm — 1 L. Grown/produced in Devon.",
+      "dfc-b:hasType": "dfc-pt:fruit-juice",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Litre",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:totalTheoreticalStock": 198
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/heritage-tomatoes-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Heritage Tomatoes",
+      "dfc-b:description": "Heritage Tomatoes from Moorland Field Farm — 500 g. Grown/produced in Devon.",
+      "dfc-b:hasType": "dfc-pt:tomato",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:totalTheoreticalStock": 108
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
+  "@graph": [
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "34 Farm Lane",
+      "dfc-b:postcode": "NR2 4PE",
+      "dfc-b:city": "Norwich",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Norfolk",
+      "dfc-b:latitude": 52.58769,
+      "dfc-b:longitude": 1.24319
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "46 Orchard Way",
+      "dfc-b:postcode": "BS5 4ER",
+      "dfc-b:city": "Bristol",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Somerset",
+      "dfc-b:latitude": 51.55023,
+      "dfc-b:longitude": -2.6812
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "114 Old Orchard",
+      "dfc-b:postcode": "BN5B 1PR",
+      "dfc-b:city": "Lewes",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "East Sussex",
+      "dfc-b:latitude": 50.78379,
+      "dfc-b:longitude": 0.00977
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "9 Hollow Lane",
+      "dfc-b:postcode": "BA2A 8DB",
+      "dfc-b:city": "Bath",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Somerset",
+      "dfc-b:latitude": 51.46762,
+      "dfc-b:longitude": -2.38335
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "108 Old Orchard",
+      "dfc-b:postcode": "GL3 1LW",
+      "dfc-b:city": "Stroud",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Gloucestershire",
+      "dfc-b:latitude": 51.62192,
+      "dfc-b:longitude": -2.17241
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "63 High Street",
+      "dfc-b:postcode": "YO4 5JB",
+      "dfc-b:city": "York",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "North Yorkshire",
+      "dfc-b:latitude": 54.09408,
+      "dfc-b:longitude": -1.2043
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "71 Orchard Way",
+      "dfc-b:postcode": "BA8A 6TW",
+      "dfc-b:city": "Frome",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Somerset",
+      "dfc-b:latitude": 51.09921,
+      "dfc-b:longitude": -2.46369
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "13 Old Orchard",
+      "dfc-b:postcode": "CT8B 3YY",
+      "dfc-b:city": "Canterbury",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Kent",
+      "dfc-b:latitude": 51.37225,
+      "dfc-b:longitude": 0.98712
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "104 The Green",
+      "dfc-b:postcode": "HR5 3SG",
+      "dfc-b:city": "Hereford",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Herefordshire",
+      "dfc-b:latitude": 52.17235,
+      "dfc-b:longitude": -2.84738
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "85 Meadow View",
+      "dfc-b:postcode": "TQ7 5TN",
+      "dfc-b:city": "Totnes",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Devon",
+      "dfc-b:latitude": 50.49915,
+      "dfc-b:longitude": -3.59499
+    }
+  ]
+}

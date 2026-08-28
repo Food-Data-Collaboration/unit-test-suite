@@ -1,0 +1,1877 @@
+{
+  "@context": "https://w3id.org/dfc/ontology/context/context_2.0.0.json",
+  "@graph": [
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Somerset Levels Collective",
+      "dfc-b:hasDescription": "Small agroecological farm supplying Norwich and surrounds.",
+      "dfc-b:email": "hello@somerset-levels-norwich.example",
+      "dfc-b:hasPhoneNumber": "+44 1654 263032",
+      "dfc-b:websitePage": "https://www.somerset-levels-norwich.example",
+      "dfc-b:VATnumber": "GB386379402",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Callum Davies",
+      "ofn:long_description": "Small agroecological farm supplying Norwich and surrounds. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/beef-topside-1",
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/free-range-eggs-12-2",
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/plums-victoria-3",
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/beetroot-bunch-4",
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/cucumber-5"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/beef-topside-1",
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/free-range-eggs-12-2",
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/plums-victoria-3",
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/beetroot-bunch-4",
+        "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/cucumber-5"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Wye Valley Pastures",
+      "dfc-b:hasDescription": "Small agroecological farm supplying Bristol and surrounds.",
+      "dfc-b:email": "hello@wye-valley-bristol.example",
+      "dfc-b:hasPhoneNumber": "+44 1034 183667",
+      "dfc-b:websitePage": "https://www.wye-valley-bristol.example",
+      "dfc-b:VATnumber": "GB618495931",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Ffion Evans",
+      "ofn:long_description": "Small agroecological farm supplying Bristol and surrounds. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/leeks-trimmed-1",
+        "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/seasonal-veg-box-small-2",
+        "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/apple-juice-cloudy-3",
+        "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/onions-brown-4"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/CatalogItems/leeks-trimmed-1",
+        "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/CatalogItems/seasonal-veg-box-small-2",
+        "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/CatalogItems/apple-juice-cloudy-3",
+        "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/CatalogItems/onions-brown-4"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Bramble Hill Market Garden",
+      "dfc-b:hasDescription": "Community market garden and orchard serving Lewes box scheme.",
+      "dfc-b:email": "hello@bramble-hill-lewes.example",
+      "dfc-b:hasPhoneNumber": "+44 1350 340174",
+      "dfc-b:websitePage": "https://www.bramble-hill-lewes.example",
+      "dfc-b:VATnumber": "GB928327648",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Sam Hughes",
+      "ofn:long_description": "Community market garden and orchard serving Lewes box scheme. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/pears-conference-1",
+        "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/raspberries-2",
+        "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/free-range-eggs-6-3",
+        "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/potatoes-maris-piper-4"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/CatalogItems/pears-conference-1",
+        "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/CatalogItems/raspberries-2",
+        "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/CatalogItems/free-range-eggs-6-3",
+        "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/CatalogItems/potatoes-maris-piper-4"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Blackdown Hills Orchard",
+      "dfc-b:hasDescription": "Pasture-fed livestock and seasonal veg from the Somerset hills.",
+      "dfc-b:email": "hello@blackdown-hills-bath.example",
+      "dfc-b:hasPhoneNumber": "+44 1532 634277",
+      "dfc-b:websitePage": "https://www.blackdown-hills-bath.example",
+      "dfc-b:VATnumber": "GB238849696",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Priya Brown",
+      "ofn:long_description": "Pasture-fed livestock and seasonal veg from the Somerset hills. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/sourdough-loaf-1",
+        "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/strawberries-2",
+        "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/raw-wildflower-honey-3",
+        "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/kale-curly-4"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/CatalogItems/sourdough-loaf-1",
+        "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/CatalogItems/strawberries-2",
+        "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/CatalogItems/raw-wildflower-honey-3",
+        "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/CatalogItems/kale-curly-4"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Cotswold Edge Dairy",
+      "dfc-b:hasDescription": "Family-run holding on the edge of Gloucestershire, organic since 2018.",
+      "dfc-b:email": "hello@cotswold-edge-stroud.example",
+      "dfc-b:hasPhoneNumber": "+44 1462 575763",
+      "dfc-b:websitePage": "https://www.cotswold-edge-stroud.example",
+      "dfc-b:VATnumber": "GB848018451",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Lena Brown",
+      "ofn:long_description": "Family-run holding on the edge of Gloucestershire, organic since 2018. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/rye-bread-1",
+        "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/butter-salted-block-2",
+        "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/whole-milk-3",
+        "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/chicken-whole-4"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/CatalogItems/rye-bread-1",
+        "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/CatalogItems/butter-salted-block-2",
+        "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/CatalogItems/whole-milk-3",
+        "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/CatalogItems/chicken-whole-4"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Cornish Hedgerow Produce",
+      "dfc-b:hasDescription": "Family-run holding on the edge of North Yorkshire, organic since 2018.",
+      "dfc-b:email": "hello@cornish-hedgerow-york.example",
+      "dfc-b:hasPhoneNumber": "+44 1015 972064",
+      "dfc-b:websitePage": "https://www.cornish-hedgerow-york.example",
+      "dfc-b:VATnumber": "GB252880957",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Lena Hughes",
+      "ofn:long_description": "Family-run holding on the edge of North Yorkshire, organic since 2018. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/heritage-tomatoes-1",
+        "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/lamb-leg-joint-2",
+        "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/apples-mixed-heritage-3",
+        "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/pork-shoulder-4"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/CatalogItems/heritage-tomatoes-1",
+        "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/CatalogItems/lamb-leg-joint-2",
+        "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/CatalogItems/apples-mixed-heritage-3",
+        "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/CatalogItems/pork-shoulder-4"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Tamar Valley Smallholding",
+      "dfc-b:hasDescription": "Small agroecological farm supplying Frome and surrounds.",
+      "dfc-b:email": "hello@tamar-valley-frome.example",
+      "dfc-b:hasPhoneNumber": "+44 1346 804314",
+      "dfc-b:websitePage": "https://www.tamar-valley-frome.example",
+      "dfc-b:VATnumber": "GB782489638",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Jon O'Leary",
+      "ofn:long_description": "Small agroecological farm supplying Frome and surrounds. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/basil-pesto-100g-1",
+        "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/mature-cheddar-cow-2",
+        "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/courgettes-3",
+        "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/jam-strawberry-4"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/CatalogItems/basil-pesto-100g-1",
+        "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/CatalogItems/mature-cheddar-cow-2",
+        "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/CatalogItems/courgettes-3",
+        "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/CatalogItems/jam-strawberry-4"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Northumbrian Moor Free Range",
+      "dfc-b:hasDescription": "Pasture-fed livestock and seasonal veg from the Kent hills.",
+      "dfc-b:email": "hello@northumbrian-moor-canterbury.example",
+      "dfc-b:hasPhoneNumber": "+44 1473 665427",
+      "dfc-b:websitePage": "https://www.northumbrian-moor-canterbury.example",
+      "dfc-b:VATnumber": "GB103105183",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Priya Khan",
+      "ofn:long_description": "Pasture-fed livestock and seasonal veg from the Kent hills. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/carrots-washed-1",
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/spinach-baby-leaf-2",
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/fresh-goats-cheese-3",
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/potatoes-maris-piper-4",
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/sourdough-loaf-5"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/carrots-washed-1",
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/spinach-baby-leaf-2",
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/fresh-goats-cheese-3",
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/potatoes-maris-piper-4",
+        "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/sourdough-loaf-5"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Weald & Down Organics",
+      "dfc-b:hasDescription": "Small agroecological farm supplying Hereford and surrounds.",
+      "dfc-b:email": "hello@weald-down-hereford.example",
+      "dfc-b:hasPhoneNumber": "+44 1338 570405",
+      "dfc-b:websitePage": "https://www.weald-down-hereford.example",
+      "dfc-b:VATnumber": "GB670106513",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Tom Morgan",
+      "ofn:long_description": "Small agroecological farm supplying Hereford and surrounds. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/pears-conference-1",
+        "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/mature-cheddar-cow-2",
+        "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/jam-strawberry-3",
+        "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/raw-wildflower-honey-4"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/CatalogItems/pears-conference-1",
+        "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/CatalogItems/mature-cheddar-cow-2",
+        "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/CatalogItems/jam-strawberry-3",
+        "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/CatalogItems/raw-wildflower-honey-4"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "@type": "dfc-b:Organization",
+      "dfc-b:name": "Moorland Field Farm",
+      "dfc-b:hasDescription": "Family-run holding on the edge of Devon, organic since 2018.",
+      "dfc-b:email": "hello@moorland-field-totnes.example",
+      "dfc-b:hasPhoneNumber": "+44 1260 509386",
+      "dfc-b:websitePage": "https://www.moorland-field-totnes.example",
+      "dfc-b:VATnumber": "GB132677360",
+      "dfc-b:VATStatus": false,
+      "ofn:contact_name": "Sam Hughes",
+      "ofn:long_description": "Family-run holding on the edge of Devon, organic since 2018. Members collect on Fridays or opt for local delivery.",
+      "dfc-b:hasAddress": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Addresses/1",
+      "dfc-b:supplies": [
+        "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/chicken-whole-1",
+        "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/spinach-baby-leaf-2",
+        "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/apple-juice-cloudy-3",
+        "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/heritage-tomatoes-4"
+      ],
+      "dfc-b:manages": [
+        "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/CatalogItems/chicken-whole-1",
+        "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/CatalogItems/spinach-baby-leaf-2",
+        "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/CatalogItems/apple-juice-cloudy-3",
+        "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/CatalogItems/heritage-tomatoes-4"
+      ]
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "34 Farm Lane",
+      "dfc-b:postcode": "NR2 4PE",
+      "dfc-b:city": "Norwich",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Norfolk",
+      "dfc-b:latitude": 52.58769,
+      "dfc-b:longitude": 1.24319
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "46 Orchard Way",
+      "dfc-b:postcode": "BS5 4ER",
+      "dfc-b:city": "Bristol",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Somerset",
+      "dfc-b:latitude": 51.55023,
+      "dfc-b:longitude": -2.6812
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "114 Old Orchard",
+      "dfc-b:postcode": "BN5B 1PR",
+      "dfc-b:city": "Lewes",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "East Sussex",
+      "dfc-b:latitude": 50.78379,
+      "dfc-b:longitude": 0.00977
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "9 Hollow Lane",
+      "dfc-b:postcode": "BA2A 8DB",
+      "dfc-b:city": "Bath",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Somerset",
+      "dfc-b:latitude": 51.46762,
+      "dfc-b:longitude": -2.38335
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "108 Old Orchard",
+      "dfc-b:postcode": "GL3 1LW",
+      "dfc-b:city": "Stroud",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Gloucestershire",
+      "dfc-b:latitude": 51.62192,
+      "dfc-b:longitude": -2.17241
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "63 High Street",
+      "dfc-b:postcode": "YO4 5JB",
+      "dfc-b:city": "York",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "North Yorkshire",
+      "dfc-b:latitude": 54.09408,
+      "dfc-b:longitude": -1.2043
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "71 Orchard Way",
+      "dfc-b:postcode": "BA8A 6TW",
+      "dfc-b:city": "Frome",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Somerset",
+      "dfc-b:latitude": 51.09921,
+      "dfc-b:longitude": -2.46369
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "13 Old Orchard",
+      "dfc-b:postcode": "CT8B 3YY",
+      "dfc-b:city": "Canterbury",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Kent",
+      "dfc-b:latitude": 51.37225,
+      "dfc-b:longitude": 0.98712
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "104 The Green",
+      "dfc-b:postcode": "HR5 3SG",
+      "dfc-b:city": "Hereford",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Herefordshire",
+      "dfc-b:latitude": 52.17235,
+      "dfc-b:longitude": -2.84738
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Addresses/1",
+      "@type": "dfc-b:Address",
+      "dfc-b:street": "85 Meadow View",
+      "dfc-b:postcode": "TQ7 5TN",
+      "dfc-b:city": "Totnes",
+      "dfc-b:hasCountry": "GB",
+      "dfc-b:region": "Devon",
+      "dfc-b:latitude": 50.49915,
+      "dfc-b:longitude": -3.59499
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/beef-topside-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Beef - Topside",
+      "dfc-b:description": "Beef - Topside from Somerset Levels Collective — 1 kg. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:beef",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 161
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/free-range-eggs-12-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Free Range Eggs (12)",
+      "dfc-b:description": "Free Range Eggs (12) from Somerset Levels Collective — 12 eggs. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:egg",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 149
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/plums-victoria-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Plums - Victoria",
+      "dfc-b:description": "Plums - Victoria from Somerset Levels Collective — 500 g. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:plum",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 31
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/beetroot-bunch-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Beetroot - Bunch",
+      "dfc-b:description": "Beetroot - Bunch from Somerset Levels Collective — bunch. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:beetroot",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 161
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/cucumber-5",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Cucumber",
+      "dfc-b:description": "Cucumber from Somerset Levels Collective — 1 piece. Grown/produced in Norfolk.",
+      "dfc-b:hasType": "dfc-pt:cucumber",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:totalTheoreticalStock": 159
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/leeks-trimmed-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Leeks - Trimmed",
+      "dfc-b:description": "Leeks - Trimmed from Wye Valley Pastures — 500 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:leek",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:totalTheoreticalStock": 111
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/seasonal-veg-box-small-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Seasonal Veg Box - Small",
+      "dfc-b:description": "Seasonal Veg Box - Small from Wye Valley Pastures — 1 box. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:vegetable",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:totalTheoreticalStock": 178
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/apple-juice-cloudy-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Apple Juice - Cloudy",
+      "dfc-b:description": "Apple Juice - Cloudy from Wye Valley Pastures — 1 L. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:fruit-juice",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Litre",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:totalTheoreticalStock": 125
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/onions-brown-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Onions - Brown",
+      "dfc-b:description": "Onions - Brown from Wye Valley Pastures — 1 kg. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:onion",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:totalTheoreticalStock": 88
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/pears-conference-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Pears - Conference",
+      "dfc-b:description": "Pears - Conference from Bramble Hill Market Garden — 1 kg. Grown/produced in East Sussex.",
+      "dfc-b:hasType": "dfc-pt:pear",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:totalTheoreticalStock": 109
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/raspberries-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Raspberries",
+      "dfc-b:description": "Raspberries from Bramble Hill Market Garden — 200 g. Grown/produced in East Sussex.",
+      "dfc-b:hasType": "dfc-pt:raspberry",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 200.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:totalTheoreticalStock": 104
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/free-range-eggs-6-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Free Range Eggs (6)",
+      "dfc-b:description": "Free Range Eggs (6) from Bramble Hill Market Garden — 6 eggs. Grown/produced in East Sussex.",
+      "dfc-b:hasType": "dfc-pt:egg",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:totalTheoreticalStock": 27
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/potatoes-maris-piper-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Potatoes - Maris Piper",
+      "dfc-b:description": "Potatoes - Maris Piper from Bramble Hill Market Garden — 1 kg. Grown/produced in East Sussex.",
+      "dfc-b:hasType": "dfc-pt:potato",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:totalTheoreticalStock": 47
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/sourdough-loaf-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Sourdough Loaf",
+      "dfc-b:description": "Sourdough Loaf from Blackdown Hills Orchard — 1 loaf. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:bread",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:totalTheoreticalStock": 85
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/strawberries-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Strawberries",
+      "dfc-b:description": "Strawberries from Blackdown Hills Orchard — 250 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:strawberry",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:totalTheoreticalStock": 113
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/raw-wildflower-honey-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Raw Wildflower Honey",
+      "dfc-b:description": "Raw Wildflower Honey from Blackdown Hills Orchard — 340 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:honey",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:totalTheoreticalStock": 96
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/kale-curly-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Kale - Curly",
+      "dfc-b:description": "Kale - Curly from Blackdown Hills Orchard — 200 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:kale",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 200.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:totalTheoreticalStock": 69
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/rye-bread-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Rye Bread",
+      "dfc-b:description": "Rye Bread from Cotswold Edge Dairy — 1 loaf. Grown/produced in Gloucestershire.",
+      "dfc-b:hasType": "dfc-pt:bread",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:totalTheoreticalStock": 97
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/butter-salted-block-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Butter - Salted Block",
+      "dfc-b:description": "Butter - Salted Block from Cotswold Edge Dairy — 250 g. Grown/produced in Gloucestershire.",
+      "dfc-b:hasType": "dfc-pt:butter",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:totalTheoreticalStock": 133
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/whole-milk-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Whole Milk",
+      "dfc-b:description": "Whole Milk from Cotswold Edge Dairy — 1 L. Grown/produced in Gloucestershire.",
+      "dfc-b:hasType": "dfc-pt:milk",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Litre",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:totalTheoreticalStock": 188
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/chicken-whole-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Chicken - Whole",
+      "dfc-b:description": "Chicken - Whole from Cotswold Edge Dairy — 1.5 kg. Grown/produced in Gloucestershire.",
+      "dfc-b:hasType": "dfc-pt:chicken",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:totalTheoreticalStock": 192
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/heritage-tomatoes-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Heritage Tomatoes",
+      "dfc-b:description": "Heritage Tomatoes from Cornish Hedgerow Produce — 500 g. Grown/produced in North Yorkshire.",
+      "dfc-b:hasType": "dfc-pt:tomato",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:totalTheoreticalStock": 136
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/lamb-leg-joint-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Lamb - Leg Joint",
+      "dfc-b:description": "Lamb - Leg Joint from Cornish Hedgerow Produce — 1 kg. Grown/produced in North Yorkshire.",
+      "dfc-b:hasType": "dfc-pt:lamb",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:totalTheoreticalStock": 82
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/apples-mixed-heritage-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Apples - Mixed Heritage",
+      "dfc-b:description": "Apples - Mixed Heritage from Cornish Hedgerow Produce — 1 kg. Grown/produced in North Yorkshire.",
+      "dfc-b:hasType": "dfc-pt:apples",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:totalTheoreticalStock": 76
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/pork-shoulder-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Pork - Shoulder",
+      "dfc-b:description": "Pork - Shoulder from Cornish Hedgerow Produce — 1 kg. Grown/produced in North Yorkshire.",
+      "dfc-b:hasType": "dfc-pt:pork",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:totalTheoreticalStock": 136
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/basil-pesto-100g-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Basil Pesto - 100g",
+      "dfc-b:description": "Basil Pesto - 100g from Tamar Valley Smallholding — 100 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:processed-vegetable",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:totalTheoreticalStock": 160
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/mature-cheddar-cow-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Mature Cheddar (Cow)",
+      "dfc-b:description": "Mature Cheddar (Cow) from Tamar Valley Smallholding — 250 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:mature-cheese",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:totalTheoreticalStock": 153
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/courgettes-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Courgettes",
+      "dfc-b:description": "Courgettes from Tamar Valley Smallholding — 500 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:courgette",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:totalTheoreticalStock": 105
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/jam-strawberry-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Jam - Strawberry",
+      "dfc-b:description": "Jam - Strawberry from Tamar Valley Smallholding — 340 g. Grown/produced in Somerset.",
+      "dfc-b:hasType": "dfc-pt:jam",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:totalTheoreticalStock": 200
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/carrots-washed-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Carrots - Washed",
+      "dfc-b:description": "Carrots - Washed from Northumbrian Moor Free Range — 1 kg. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:carrot",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 167
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/spinach-baby-leaf-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Spinach - Baby Leaf",
+      "dfc-b:description": "Spinach - Baby Leaf from Northumbrian Moor Free Range — 150 g. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:spinach",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 150.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 157
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/fresh-goats-cheese-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Fresh Goats Cheese",
+      "dfc-b:description": "Fresh Goats Cheese from Northumbrian Moor Free Range — 150 g. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:goat-fresh-cheese",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 150.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 131
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/potatoes-maris-piper-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Potatoes - Maris Piper",
+      "dfc-b:description": "Potatoes - Maris Piper from Northumbrian Moor Free Range — 1 kg. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:potato",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 139
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/sourdough-loaf-5",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Sourdough Loaf",
+      "dfc-b:description": "Sourdough Loaf from Northumbrian Moor Free Range — 1 loaf. Grown/produced in Kent.",
+      "dfc-b:hasType": "dfc-pt:bread",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Piece",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:totalTheoreticalStock": 41
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/pears-conference-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Pears - Conference",
+      "dfc-b:description": "Pears - Conference from Weald & Down Organics — 1 kg. Grown/produced in Herefordshire.",
+      "dfc-b:hasType": "dfc-pt:pear",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:totalTheoreticalStock": 117
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/mature-cheddar-cow-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Mature Cheddar (Cow)",
+      "dfc-b:description": "Mature Cheddar (Cow) from Weald & Down Organics — 250 g. Grown/produced in Herefordshire.",
+      "dfc-b:hasType": "dfc-pt:mature-cheese",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:totalTheoreticalStock": 158
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/jam-strawberry-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Jam - Strawberry",
+      "dfc-b:description": "Jam - Strawberry from Weald & Down Organics — 340 g. Grown/produced in Herefordshire.",
+      "dfc-b:hasType": "dfc-pt:jam",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:totalTheoreticalStock": 27
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/raw-wildflower-honey-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Raw Wildflower Honey",
+      "dfc-b:description": "Raw Wildflower Honey from Weald & Down Organics — 340 g. Grown/produced in Herefordshire.",
+      "dfc-b:hasType": "dfc-pt:honey",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:totalTheoreticalStock": 191
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/chicken-whole-1",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Chicken - Whole",
+      "dfc-b:description": "Chicken - Whole from Moorland Field Farm — 1.5 kg. Grown/produced in Devon.",
+      "dfc-b:hasType": "dfc-pt:chicken",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Kilogram",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:totalTheoreticalStock": 61
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/spinach-baby-leaf-2",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Spinach - Baby Leaf",
+      "dfc-b:description": "Spinach - Baby Leaf from Moorland Field Farm — 150 g. Grown/produced in Devon.",
+      "dfc-b:hasType": "dfc-pt:spinach",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 150.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:totalTheoreticalStock": 121
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/apple-juice-cloudy-3",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Apple Juice - Cloudy",
+      "dfc-b:description": "Apple Juice - Cloudy from Moorland Field Farm — 1 L. Grown/produced in Devon.",
+      "dfc-b:hasType": "dfc-pt:fruit-juice",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Litre",
+        "dfc-b:value": 1.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:totalTheoreticalStock": 198
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/heritage-tomatoes-4",
+      "@type": "dfc-b:SuppliedProduct",
+      "dfc-b:name": "Heritage Tomatoes",
+      "dfc-b:description": "Heritage Tomatoes from Moorland Field Farm — 500 g. Grown/produced in Devon.",
+      "dfc-b:hasType": "dfc-pt:tomato",
+      "dfc-b:hasQuantity": {
+        "@type": "dfc-b:QuantitativeValue",
+        "dfc-b:hasUnit": "dfc-m:Gram",
+        "dfc-b:value": 100.0
+      },
+      "dfc-b:suppliedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:totalTheoreticalStock": 108
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/beef-topside-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/beef-topside-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:stockLimitation": 23,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/beef-topside-1"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/beef-topside-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/customerCategories/retail",
+      "dfc-b:stockLimitation": 23,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 19.95,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/free-range-eggs-12-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/free-range-eggs-12-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:stockLimitation": 13,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/free-range-eggs-12-2"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/free-range-eggs-12-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/customerCategories/retail",
+      "dfc-b:stockLimitation": 13,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 4.95,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/plums-victoria-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/plums-victoria-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:stockLimitation": 50,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/plums-victoria-3",
+      "dfc-b:sku": "SOME-PLUMS--03"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/plums-victoria-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/customerCategories/retail",
+      "dfc-b:stockLimitation": 50,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.18,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/beetroot-bunch-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/beetroot-bunch-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:stockLimitation": 17,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/beetroot-bunch-4"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/beetroot-bunch-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/customerCategories/retail",
+      "dfc-b:stockLimitation": 17,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 1.95,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/CatalogItems/cucumber-5",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/SuppliedProducts/cucumber-5",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich",
+      "dfc-b:stockLimitation": 45,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/cucumber-5",
+      "dfc-b:sku": "SOME-CUCUMB-05"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/Offers/cucumber-5",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/customerCategories/retail",
+      "dfc-b:stockLimitation": 45,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 0.95,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/CatalogItems/leeks-trimmed-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/leeks-trimmed-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:stockLimitation": 16,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Offers/leeks-trimmed-1"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Offers/leeks-trimmed-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/customerCategories/retail",
+      "dfc-b:stockLimitation": 16,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 2.6,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/CatalogItems/seasonal-veg-box-small-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/seasonal-veg-box-small-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:stockLimitation": 25,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Offers/seasonal-veg-box-small-2"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Offers/seasonal-veg-box-small-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/customerCategories/retail",
+      "dfc-b:stockLimitation": 25,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 12.74,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/CatalogItems/apple-juice-cloudy-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/apple-juice-cloudy-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:stockLimitation": 31,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Offers/apple-juice-cloudy-3",
+      "dfc-b:sku": "WYE--APPLE--03"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Offers/apple-juice-cloudy-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/customerCategories/retail",
+      "dfc-b:stockLimitation": 31,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 4.01,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/CatalogItems/onions-brown-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/SuppliedProducts/onions-brown-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol",
+      "dfc-b:stockLimitation": 34,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Offers/onions-brown-4"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/Offers/onions-brown-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/customerCategories/retail",
+      "dfc-b:stockLimitation": 34,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 2.43,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/CatalogItems/pears-conference-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/pears-conference-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:stockLimitation": 24,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Offers/pears-conference-1"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Offers/pears-conference-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/customerCategories/retail",
+      "dfc-b:stockLimitation": 24,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 2.71,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/CatalogItems/raspberries-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/raspberries-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:stockLimitation": 50,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Offers/raspberries-2"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Offers/raspberries-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/customerCategories/retail",
+      "dfc-b:stockLimitation": 50,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.11,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/CatalogItems/free-range-eggs-6-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/free-range-eggs-6-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:stockLimitation": 21,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Offers/free-range-eggs-6-3",
+      "dfc-b:sku": "BRAM-FREE-R-03"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Offers/free-range-eggs-6-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/customerCategories/retail",
+      "dfc-b:stockLimitation": 21,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 2.62,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/CatalogItems/potatoes-maris-piper-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/SuppliedProducts/potatoes-maris-piper-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes",
+      "dfc-b:stockLimitation": 60,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Offers/potatoes-maris-piper-4"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/Offers/potatoes-maris-piper-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/customerCategories/retail",
+      "dfc-b:stockLimitation": 60,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 1.86,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/CatalogItems/sourdough-loaf-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/sourdough-loaf-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:stockLimitation": 43,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Offers/sourdough-loaf-1",
+      "dfc-b:sku": "BLAC-SOURDO-01"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Offers/sourdough-loaf-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/customerCategories/retail",
+      "dfc-b:stockLimitation": 43,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.95,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/CatalogItems/strawberries-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/strawberries-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:stockLimitation": 31,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Offers/strawberries-2"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Offers/strawberries-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/customerCategories/retail",
+      "dfc-b:stockLimitation": 31,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 4.39,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/CatalogItems/raw-wildflower-honey-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/raw-wildflower-honey-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:stockLimitation": 30,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Offers/raw-wildflower-honey-3"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Offers/raw-wildflower-honey-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/customerCategories/retail",
+      "dfc-b:stockLimitation": 30,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 6.37,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/CatalogItems/kale-curly-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/SuppliedProducts/kale-curly-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath",
+      "dfc-b:stockLimitation": 53,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Offers/kale-curly-4"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/Offers/kale-curly-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/customerCategories/retail",
+      "dfc-b:stockLimitation": 53,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 1.95,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/CatalogItems/rye-bread-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/rye-bread-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:stockLimitation": 47,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Offers/rye-bread-1"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Offers/rye-bread-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/customerCategories/retail",
+      "dfc-b:stockLimitation": 47,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 4.02,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/CatalogItems/butter-salted-block-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/butter-salted-block-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:stockLimitation": 60,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Offers/butter-salted-block-2"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Offers/butter-salted-block-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/customerCategories/retail",
+      "dfc-b:stockLimitation": 60,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 2.95,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/CatalogItems/whole-milk-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/whole-milk-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:stockLimitation": 50,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Offers/whole-milk-3",
+      "dfc-b:sku": "COTS-WHOLE--03"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Offers/whole-milk-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/customerCategories/retail",
+      "dfc-b:stockLimitation": 50,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 1.55,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/CatalogItems/chicken-whole-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/SuppliedProducts/chicken-whole-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud",
+      "dfc-b:stockLimitation": 19,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Offers/chicken-whole-4"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/Offers/chicken-whole-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/customerCategories/retail",
+      "dfc-b:stockLimitation": 19,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 9.95,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/CatalogItems/heritage-tomatoes-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/heritage-tomatoes-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:stockLimitation": 22,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Offers/heritage-tomatoes-1"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Offers/heritage-tomatoes-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/customerCategories/retail",
+      "dfc-b:stockLimitation": 22,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.27,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/CatalogItems/lamb-leg-joint-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/lamb-leg-joint-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:stockLimitation": 58,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Offers/lamb-leg-joint-2",
+      "dfc-b:sku": "CORN-LAMB-L-02"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Offers/lamb-leg-joint-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/customerCategories/retail",
+      "dfc-b:stockLimitation": 58,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 16.95,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/CatalogItems/apples-mixed-heritage-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/apples-mixed-heritage-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:stockLimitation": 43,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Offers/apples-mixed-heritage-3"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Offers/apples-mixed-heritage-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/customerCategories/retail",
+      "dfc-b:stockLimitation": 43,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.79,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/CatalogItems/pork-shoulder-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/SuppliedProducts/pork-shoulder-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york",
+      "dfc-b:stockLimitation": 43,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Offers/pork-shoulder-4",
+      "dfc-b:sku": "CORN-PORK-S-04"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/Offers/pork-shoulder-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/customerCategories/retail",
+      "dfc-b:stockLimitation": 43,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 10.86,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/CatalogItems/basil-pesto-100g-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/basil-pesto-100g-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:stockLimitation": 100,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Offers/basil-pesto-100g-1"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Offers/basil-pesto-100g-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/customerCategories/retail",
+      "dfc-b:stockLimitation": 100,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 5.12,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/CatalogItems/mature-cheddar-cow-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/mature-cheddar-cow-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:stockLimitation": 38,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Offers/mature-cheddar-cow-2"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Offers/mature-cheddar-cow-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/customerCategories/retail",
+      "dfc-b:stockLimitation": 38,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 4.4,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/CatalogItems/courgettes-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/courgettes-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:stockLimitation": 18,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Offers/courgettes-3"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Offers/courgettes-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/customerCategories/retail",
+      "dfc-b:stockLimitation": 18,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 2.0,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/CatalogItems/jam-strawberry-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/SuppliedProducts/jam-strawberry-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome",
+      "dfc-b:stockLimitation": 31,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Offers/jam-strawberry-4"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/Offers/jam-strawberry-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/customerCategories/retail",
+      "dfc-b:stockLimitation": 31,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.5,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/carrots-washed-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/carrots-washed-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:stockLimitation": 50,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/carrots-washed-1"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/carrots-washed-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/customerCategories/retail",
+      "dfc-b:stockLimitation": 50,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 1.77,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/spinach-baby-leaf-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/spinach-baby-leaf-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:stockLimitation": 48,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/spinach-baby-leaf-2"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/spinach-baby-leaf-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/customerCategories/retail",
+      "dfc-b:stockLimitation": 48,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 2.5,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/fresh-goats-cheese-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/fresh-goats-cheese-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:stockLimitation": 52,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/fresh-goats-cheese-3"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/fresh-goats-cheese-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/customerCategories/retail",
+      "dfc-b:stockLimitation": 52,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 4.33,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/potatoes-maris-piper-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/potatoes-maris-piper-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:stockLimitation": 44,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/potatoes-maris-piper-4"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/potatoes-maris-piper-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/customerCategories/retail",
+      "dfc-b:stockLimitation": 44,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 1.94,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/CatalogItems/sourdough-loaf-5",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/SuppliedProducts/sourdough-loaf-5",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury",
+      "dfc-b:stockLimitation": 100,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/sourdough-loaf-5"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/Offers/sourdough-loaf-5",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/customerCategories/retail",
+      "dfc-b:stockLimitation": 100,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.2,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/CatalogItems/pears-conference-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/pears-conference-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:stockLimitation": 36,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Offers/pears-conference-1"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Offers/pears-conference-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/customerCategories/retail",
+      "dfc-b:stockLimitation": 36,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 2.86,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/CatalogItems/mature-cheddar-cow-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/mature-cheddar-cow-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:stockLimitation": 24,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Offers/mature-cheddar-cow-2",
+      "dfc-b:sku": "WEAL-MATURE-02"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Offers/mature-cheddar-cow-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/customerCategories/retail",
+      "dfc-b:stockLimitation": 24,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.95,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/CatalogItems/jam-strawberry-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/jam-strawberry-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:stockLimitation": 20,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Offers/jam-strawberry-3"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Offers/jam-strawberry-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/customerCategories/retail",
+      "dfc-b:stockLimitation": 20,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 4.37,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/CatalogItems/raw-wildflower-honey-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/SuppliedProducts/raw-wildflower-honey-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford",
+      "dfc-b:stockLimitation": 39,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Offers/raw-wildflower-honey-4",
+      "dfc-b:sku": "WEAL-RAW-WI-04"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/Offers/raw-wildflower-honey-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/customerCategories/retail",
+      "dfc-b:stockLimitation": 39,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 5.95,
+        "dfc-b:VATrate": 20.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/CatalogItems/chicken-whole-1",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/chicken-whole-1",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:stockLimitation": 20,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Offers/chicken-whole-1"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Offers/chicken-whole-1",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/customerCategories/retail",
+      "dfc-b:stockLimitation": 20,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 8.09,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/CatalogItems/spinach-baby-leaf-2",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/spinach-baby-leaf-2",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:stockLimitation": 0,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Offers/spinach-baby-leaf-2"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Offers/spinach-baby-leaf-2",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/customerCategories/retail",
+      "dfc-b:stockLimitation": 0,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 2.93,
+        "dfc-b:VATrate": 5.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/CatalogItems/apple-juice-cloudy-3",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/apple-juice-cloudy-3",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:stockLimitation": 48,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Offers/apple-juice-cloudy-3"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Offers/apple-juice-cloudy-3",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/customerCategories/retail",
+      "dfc-b:stockLimitation": 48,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.77,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/CatalogItems/heritage-tomatoes-4",
+      "@type": "dfc-b:CatalogItem",
+      "dfc-b:references": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/SuppliedProducts/heritage-tomatoes-4",
+      "dfc-b:managedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes",
+      "dfc-b:stockLimitation": 14,
+      "dfc-b:offeredThrough": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Offers/heritage-tomatoes-4"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/Offers/heritage-tomatoes-4",
+      "@type": "dfc-b:Offer",
+      "dfc-b:offersTo": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/customerCategories/retail",
+      "dfc-b:stockLimitation": 14,
+      "dfc-b:hasPrice": {
+        "@type": "dfc-b:Price",
+        "dfc-b:value": 3.73,
+        "dfc-b:VATrate": 0.0,
+        "dfc-b:hasUnit": "dfc-m:GBP"
+      }
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/somerset-levels-collective-norwich"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/wye-valley-pastures-bristol"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/bramble-hill-market-garden-lewes"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/blackdown-hills-orchard-bath"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/cotswold-edge-dairy-stroud"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/cornish-hedgerow-produce-york"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/tamar-valley-smallholding-frome"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/northumbrian-moor-free-range-canterbury"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/weald-down-organics-hereford"
+    },
+    {
+      "@id": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes/customerCategories/retail",
+      "@type": "dfc-b:CustomerCategory",
+      "dfc-b:name": "Retail",
+      "dfc-b:definedBy": "http://example.org/api/dfc/Enterprises/moorland-field-farm-totnes"
+    }
+  ]
+}
