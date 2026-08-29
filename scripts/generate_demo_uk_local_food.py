@@ -295,7 +295,7 @@ def build(args):
             "dfc-b:hasDescription": org["desc"],
             "dfc-b:email": org["email"],
             "dfc-b:VATnumber": org["vat"],
-            "dfc-b:VATStatus": "false",
+            "dfc-b:VATStatus": "False",
             "ofn:contact_name": org["contact"],
             "dfc-b:hasPhoneNumber": org["phone"],
             "dfc-b:websitePage": org["website"],
